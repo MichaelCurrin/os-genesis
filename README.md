@@ -19,18 +19,39 @@ This project only supports Linux systems based on Debian/Ubuntu.
 ## Install
 
 
-### Clone
+### Clone repo
 
-Download the repo using the Download button on Github.
 
-Or clone, if you have git.
+```sh
+$ mkdir -p ~/repos
+$ cd ~/repos
+```
 
+#### Download
+
+Download the zipped repo by clicking the download link
+
+- [master.zip](https://github.com/MichaelCurrin/os-genesis/archive/master.zip)
+
+Then unzip it using a GUI to `~/repos`.
+
+You could use `curl` and `unzip` too.
+
+#### Clone
+
+Or clone, if you have `git` or  - `sudo apt install -y git`
+
+```sh
+$ git clone https://github.com/MichaelCurrin/os-genesis.git
+# OR
+$ git clone git@github.com:MichaelCurrin/os-genesis.git
+```
 
 
 ## Usage
 
 
-Navigate to the project.
+Navigate to the project root.
 
 
 ### CLI
@@ -38,23 +59,25 @@ Navigate to the project.
 Run the `gen` script, which runs scripts in the [genesis](/genesis) directory.
 
 ```sh
-./gen
+$ ./gen
 ```
 
-If added to bin, this can be run from anywhere.
+Usage and available commands will be shown.
 
-This is actually like a `Makefile`.
+If added to bin, this can be run from anywhere. This is not ready yet as the script needs to know its own path.
+
+This is actually like a `Makefile` - which would be easier to bundle commands and run short aliases.
 
 ### Configure, install and update
 
-Follow the steps below in order.
+Follow the steps below in order. Note - no `.sh` is needed.
 
 ```sh
-./gen configure
+$ ./gen configure
 
-./gen install
+$ ./gen install
 
-./gen optional
+$ ./gen optional
 ```
 
 These are intended for a fresh install but they can be run repeatedly if needed, such as if this scripts are updated or something that was uninstalled manually needs to be installed again.

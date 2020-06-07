@@ -6,20 +6,14 @@ echo
 set -e
 set -x
 
-alias install='sudo apt install -y'
+function install {
+	sudo apt install -y $@
+}
 
 sudo apt update
 
-
-install \
-	git \
-	zsh \
-	vim \
-	wget \
-	dropbox \
-	redshift
-
-# System standard
+# STANDARD
+# These are probably already installed on a fresh machine.
 install \
 	curl \
 	ssh \
@@ -29,25 +23,44 @@ install \
 	make \
 	thunderbird
 
+# DEV TOOLS
+install \
+	git \
+	zsh \
+	vim \
+	wget
+
+# PRODUCTIVITY TOOLS
+install \
+	dropbox \
+	redshift
+
+# BROWSER
 
 install firefox
-
 # install firefox-geckodriver
 
 
-# Include C headers for compiling extensions - needed for lxml
+# PYTHON
+
+# Include C headers for compiling extensions - needed for lxml.
 install \
 	python3 \
 	python3-dev
 
 
+# RUBY
+
 install \
 	ruby \
-	ruby-dev
-	ruby-full
+	ruby-dev \
+	ruby-full 
 
 gem install bundler --user-install
+# WARNING:  You don't have /home/michael/.gem/ruby/2.7.0/bin in your PATH,
+#           gem executables will not run.
 
+# NODE
 
+# Requires configure.sh otherwise you'll end up with 10.x
 install nodejs
-

@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Genesis project entry point.
+
+# Print help and list of commands if no arguments given.
+# Otherwise execute commands by dispatching to scripts.
+
+set -e
+
+function help {
+  echo 'Usage: gen [COMMAND]'
+  echo
+  echo 'Commands:'
+  echo
+  ls -1 genesis | sed 's/.sh//'
+
+  exit 0
+}
+
+if [[ $# -ne 1 ]]; then
+  help
+fi
+
+SCRIPT="$1.sh"
+SCRIPT_PATH="genesis/$SCRIPT"
+
+if [[ ! -f "$SCRIPT_PATH" ]]; then
+  echo "ERROR Could not find: $SCRIPT_PATH"
+  exit 1
+fi
+
+$SCRIPT_PATH

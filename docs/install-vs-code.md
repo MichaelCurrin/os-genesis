@@ -1,4 +1,4 @@
-# VS Code
+# Install VS Code
 
 
 ## Install with GUI

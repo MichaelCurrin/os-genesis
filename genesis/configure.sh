@@ -5,7 +5,6 @@ echo
 
 set -e
 
-
 # Setup Debian repo for Node.js
 # https://nodejs.org/en/download/package-manager/
 # https://github.com/nodesource/distributions/blob/master/README.md

@@ -33,11 +33,12 @@ install \
 # PRODUCTIVITY TOOLS
 install \
 	dropbox \
-	redshift
+	redshift # Add warm screen tint.
 
 # BROWSER
 
 install firefox
+# Driver for web scraping or automated testing.
 # install firefox-geckodriver
 
 
@@ -57,10 +58,10 @@ install \
 	ruby-full 
 
 gem install bundler --user-install
-# WARNING:  You don't have /home/michael/.gem/ruby/2.7.0/bin in your PATH,
-#           gem executables will not run.
+# Follow the warning that ~/.gem/ruby/2.7.0/bin must be in PATH.
+
 
 # NODE
 
-# Requires configure.sh otherwise you'll end up with 10.x
+# Requires configure.sh to be run first, otherwise you'll end up with older 10.x version.
 install nodejs

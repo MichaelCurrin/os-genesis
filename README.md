@@ -10,6 +10,8 @@
 - Keep multiple machines in sync.
 - Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or simiar.
 
+If you're just here to see what packages I install using a Bash script, see [install.sh](/genesis/install.sh).
+
 
 ## Requirements
 

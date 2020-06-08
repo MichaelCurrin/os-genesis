@@ -2,6 +2,11 @@
 > Automate config and package management on a dev laptop
 
 
+## What is this?
+
+A simple project which contains Bash shell scripts to configure, install and update packages on a Linux machine. These are in version control and can be run repeatedly, managing it easy to maintain a machine or setup a new one.
+
+
 ## Features
 
 - Make it easy to setup and maintain a Linux dev environment.

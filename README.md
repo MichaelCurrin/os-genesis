@@ -1,6 +1,8 @@
 # OS Genesis
 > Automate config and package management on a dev laptop
 
+_If you're just here to see what APT packages I install using a Bash script, see [install.sh](/genesis/install.sh)._
+
 
 ## What is this?
 
@@ -16,8 +18,6 @@ This project focussed on _packages_ - it does not support "dotfiles" as I have s
 - Start from scratch such as a new laptop or a fresh of an OS.
 - Keep multiple machines in sync.
 - Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or simiar.
-
-If you're just here to see what packages I install using a Bash script, see [install.sh](/genesis/install.sh).
 
 
 ## Requirements

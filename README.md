@@ -1,10 +1,6 @@
 # OS Genesis
 > Automate config and package management on a dev laptop
 
-Built for: Linux (Debian / Ubuntu)
-
-Uses: [APT](https://wiki.debian.org/Apt)
-
 
 ## What is this?
 
@@ -26,9 +22,11 @@ If you're just here to see what packages I install using a Bash script, see [ins
 
 ## Requirements
 
-There are no system dependencies.
 
-This project only supports Linux systems based on Debian/Ubuntu.
+- Built for: Linux (Debian / Ubuntu)
+- Uses: [APT](https://wiki.debian.org/Apt) - the standard package manager for Debian/Ubuntu systems.
+
+There are no system dependencies - you don't even need `git`.
 
 
 ## Install

@@ -4,8 +4,10 @@
 
 ## Features
 
-- Setup and then maintain the dev environment
+- Make it easy to setup and maintain a Linux dev environment.
+- Reproducible and consistent setup which is managed in version control (just remember to update this repo after trying out a change manually).
 - Start from scratch such as a new laptop or a fresh of an OS.
+- Keep multiple machines in sync.
 - Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or simiar.
 
 
@@ -18,7 +20,6 @@ This project only supports Linux systems based on Debian/Ubuntu.
 
 ## Install
 
-
 ### Clone repo
 
 
@@ -29,9 +30,9 @@ $ cd ~/repos
 
 #### Download
 
-Download the zipped repo by clicking the download link
+Download the zipped repo by clicking the download link:
 
-- [master.zip](https://github.com/MichaelCurrin/os-genesis/archive/master.zip)
+- [Download os-genesis zip](https://github.com/MichaelCurrin/os-genesis/archive/master.zip)
 
 Then unzip it using a GUI to `~/repos`.
 
@@ -43,7 +44,11 @@ Or clone, if you have `git` or  - `sudo apt install -y git`
 
 ```sh
 $ git clone https://github.com/MichaelCurrin/os-genesis.git
-# OR
+```
+
+Or with git SSH key setup.
+
+```sh
 $ git clone git@github.com:MichaelCurrin/os-genesis.git
 ```
 
@@ -72,11 +77,21 @@ This is actually like a `Makefile` - which would be easier to bundle commands an
 
 Follow the steps below in order. Note - no `.sh` is needed.
 
+Configure Debian package sources - [configure.sh](.genesis/configure.sh).
+
 ```sh
 $ ./gen configure
+```
 
+Install APT packages - [install.sh](/genesis/install.sh)
+
+```sh
 $ ./gen install
+```
 
+Install optional packages - [optional.sh](/genesis/optional.sh)
+
+```sh
 $ ./gen optional
 ```
 
@@ -86,13 +101,19 @@ These are intended for a fresh install but they can be run repeatedly if needed,
 
 Run these at any time.
 
+Update _all_ APT packages.
+
 ```sh
 ./gen upgrade
 ```
 
+Clear space in the APT cache and autoremove unneeded packages.
+
 ```sh
 ./gen clean.sh
 ```
+
+Check versions.
 
 ```sh
 ./gen audit.sh

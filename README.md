@@ -1,12 +1,12 @@
 # OS Genesis
 > Automate config and package management on a dev laptop
 
-_If you're just here to see what APT packages I install using a Bash script, see [install.sh](/genesis/install.sh)._
 
+## Purpose
 
-## What is this?
+This is a simple project which contains Bash shell scripts to configure, install and update packages on a Linux machine. These are in version control and can be run repeatedly, managing it easy to maintain a machine or setup a new one.
 
-A simple project which contains Bash shell scripts to configure, install and update packages on a Linux machine. These are in version control and can be run repeatedly, managing it easy to maintain a machine or setup a new one.
+If you're just here to see what APT packages I install using a Bash script, see [install.sh](/genesis/install.sh).
 
 This project focussed on _packages_ - it does not support "dotfiles" as I have separate project for that.
 
@@ -21,7 +21,6 @@ This project focussed on _packages_ - it does not support "dotfiles" as I have s
 
 
 ## Requirements
-
 
 - Built for: Linux (Debian / Ubuntu)
 - Uses: [APT](https://wiki.debian.org/Apt) - the standard package manager for Debian/Ubuntu systems.

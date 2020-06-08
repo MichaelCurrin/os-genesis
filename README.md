@@ -1,10 +1,16 @@
 # OS Genesis
 > Automate config and package management on a dev laptop
 
+Built for: Linux (Debian / Ubuntu)
+
+Uses: [APT](https://wiki.debian.org/Apt)
+
 
 ## What is this?
 
 A simple project which contains Bash shell scripts to configure, install and update packages on a Linux machine. These are in version control and can be run repeatedly, managing it easy to maintain a machine or setup a new one.
+
+This project focussed on _packages_ - it does not support "dotfiles" as I have separate project for that.
 
 
 ## Features
@@ -29,7 +35,6 @@ This project only supports Linux systems based on Debian/Ubuntu.
 
 ### Clone repo
 
-
 ```sh
 $ mkdir -p ~/repos
 $ cd ~/repos
@@ -53,7 +58,7 @@ Or clone, if you have `git` or  - `sudo apt install -y git`
 $ git clone https://github.com/MichaelCurrin/os-genesis.git
 ```
 
-Or with git SSH key setup.
+Or if you setup [SSH key access](https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/github-ssh-access.md) on Github.
 
 ```sh
 $ git clone git@github.com:MichaelCurrin/os-genesis.git

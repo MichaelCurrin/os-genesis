@@ -10,14 +10,17 @@ If you're just here to see what APT packages I install using a Bash script, see 
 
 This project focussed on _packages_ - it does not support "dotfiles" as I have separate project for that.
 
+Going with the DevOps/Ansible lingo, this project handles environment _orchestration_, though just on the host machine. It becomes automation when added to a cron job.
+
 
 ## Features
 
 - Make it easy to setup and maintain a Linux dev environment.
-- Reproducible and consistent setup which is managed in version control (just remember to update this repo after trying out a change manually).
 - Start from scratch such as a new laptop or a fresh of an OS.
-- Keep multiple machines in sync.
+- Reproducible and consistent setup which is managed in the cloud (as a Github repo).
 - Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or simiar.
+- Run manually or on a cron job to ensure packages are up to dat. 
+- Keep multiple machines in sync by updating the repo on Github.
 
 
 ## Requirements

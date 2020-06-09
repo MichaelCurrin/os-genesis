@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 echo 'Audit versions'
 echo
 

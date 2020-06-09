@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+echo 'Clean packages'
+echo
+
 set -e
 
-echo 'Clean packages'
-
-sudo apt autoremove
+sudo apt autoremove -y
 
 sudo apt clean

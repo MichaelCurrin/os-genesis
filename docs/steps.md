@@ -79,6 +79,12 @@ Put off doing commits until that it setup so that git config has email and usern
 
 ## VS Code
 
-VS Code use the backup extension.
+### Install
 
-The load the gist.
+See [Install VS Code](install-vs-code.md) doc.
+
+### Extensions
+
+Install the backup extension.
+
+Then load the gist to get all extensions and configs.

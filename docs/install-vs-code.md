@@ -39,4 +39,3 @@ $ sudo apt install ./<file>.deb
 ```
 
 Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager.
-

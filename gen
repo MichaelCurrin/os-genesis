@@ -1,22 +1,27 @@
 #!/usr/bin/env bash
 # Genesis project entry point.
-
-# Print help and list of commands if no arguments given.
-# Otherwise execute commands by dispatching to scripts.
+#
+# Show help message or dispatch a given command to a shell script.
 
 set -e
 
+USAGE='Usage: gen [COMMAND] [-h]'
+
 help() {
-  echo 'Usage: gen [COMMAND]'
+  echo $USAGE
   echo
-  echo 'Commands:'
+  echo 'The COMMAND arg must be one of:'
   echo
   ls -1 genesis | sed 's/.sh//'
+
+  echo
+  echo 'Options:'
+  echo '-h,--help Show this message'
 
   exit 0
 }
 
-if [[ $# -ne 1 ]]; then
+if [[ $1 = '-h' ]] || [[ $1 = '--help' ]] || [[ $# -ne 1 ]]; then
   help
 fi
 
@@ -24,7 +29,9 @@ SCRIPT="$1.sh"
 SCRIPT_PATH="genesis/$SCRIPT"
 
 if [[ ! -f "$SCRIPT_PATH" ]]; then
-  echo "ERROR Could not find: $SCRIPT_PATH"
+  echo "ERROR: Could not find script: $SCRIPT_PATH"
+  echo
+  echo $USAGE
   exit 1
 fi
 

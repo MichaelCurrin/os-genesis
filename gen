@@ -6,7 +6,7 @@
 
 set -e
 
-function help {
+help() {
   echo 'Usage: gen [COMMAND]'
   echo
   echo 'Commands:'

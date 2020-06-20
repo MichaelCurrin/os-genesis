@@ -6,7 +6,7 @@ echo
 set -e
 
 install() {
-    sudo apt install -y -q $@
+  sudo apt install -y -q $@
 }
 
 echo 'UPDATE'
@@ -16,29 +16,29 @@ echo
 echo 'STANDARD'
 # These are included on Linux Lite but include anyway to keep them.
 install \
-    curl \
-    ssh \
-    rsync \
-    htop \
-    nano \
-    make \
-    thunderbird
+  curl \
+  ssh \
+  rsync \
+  htop \
+  nano \
+  make \
+  thunderbird
 echo '---'
 echo
 
 echo 'DEV TOOLS'
 install \
-    git \
-    zsh \
-    vim \
-    wget
+  git \
+  zsh \
+  vim \
+  wget
 echo '---'
 echo
 
 echo 'PRODUCTIVITY TOOLS'
 install \
-    dropbox \
-    redshift # Add warm screen tint.
+  dropbox \
+  redshift # Add warm screen tint.
 echo '---'
 echo
 
@@ -54,17 +54,17 @@ echo 'PYTHON'
 
 # -dev - include C headers for compiling extensions - needed for lxml.
 install \
-    python3 \
-    python3-dev
+  python3 \
+  python3-dev
 echo '---'
 echo
 
 echo 'RUBY'
 
 install \
-    ruby \
-    ruby-dev \
-    ruby-full
+  ruby \
+  ruby-dev \
+  ruby-full
 
 gem install bundler --user-install
 # Follow the warning that ~/.gem/ruby/2.7.0/bin must be in PATH.

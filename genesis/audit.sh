@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
-echo 'Audit versions'
+# Skip over any errors.
+echo 'Show installed package versions'
+echo
+
+bash --version
+zsh --version
+echo
+
+git --version
 echo
 
 python3 -V
@@ -10,11 +18,11 @@ echo "NPM - $(npm -v)"
 echo
 
 ruby --version
-echo "bundler - $(bundler --version)"
+bundler --version
 echo
 
-bash --version
-zsh --version
+go --version
 echo
 
-git --version
+rust --version
+echo

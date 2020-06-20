@@ -31,7 +31,8 @@ install \
   git \
   zsh \
   vim \
-  wget
+  wget \
+  yakuake
 echo '---'
 echo
 

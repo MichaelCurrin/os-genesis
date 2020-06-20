@@ -78,12 +78,12 @@ Navigate to the project root.
 Run the `gen` script, which runs scripts in the [genesis](/genesis) directory.
 
 ```sh
-$ ./gen
+$ ./gen --help
 ```
 
 Usage and available commands will be shown.
 
-If added to `~/bin` or similar, this can be run from anywhere. This is not ready yet as the script needs to know its own path.
+TODO: If added to `~/bin` or similar, this can be run from anywhere. - This is not ready yet as the script needs to know its own path to execute from.
 
 
 ### Configure, install and update

@@ -6,7 +6,7 @@ echo
 set -e
 set -x
 
-function install {
+install() {
 	sudo apt install -y $@
 }
 
@@ -41,7 +41,6 @@ install firefox
 # Driver for web scraping or automated testing.
 # install firefox-geckodriver
 
-
 # PYTHON
 
 # Include C headers for compiling extensions - needed for lxml.
@@ -49,17 +48,15 @@ install \
 	python3 \
 	python3-dev
 
-
 # RUBY
 
 install \
 	ruby \
 	ruby-dev \
-	ruby-full 
+	ruby-full
 
 gem install bundler --user-install
 # Follow the warning that ~/.gem/ruby/2.7.0/bin must be in PATH.
-
 
 # NODE
 

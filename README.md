@@ -25,10 +25,12 @@ Going with the DevOps/Ansible lingo, this project handles environment _orchestra
 
 ## Requirements
 
-- Built for: Linux (Debian / Ubuntu)
-- Uses: [APT](https://wiki.debian.org/Apt) - the standard package manager for Debian/Ubuntu systems.
+- Built for:
+    - Linux (Debian / Ubuntu)
+- Uses: [APT](https://wiki.debian.org/Apt)
+    - Standard for managing Debian/Ubuntu systems. The command use here is `apt` which a successor to `apt-get`. Both should be installed and commands are generally the same in both. Read differences [here](https://www.linux-magazine.com/Issues/2018/208/apt-vs.-apt-get)
 
-There are no system dependencies - you don't even need `git`.
+There are no other system dependencies - you don't even need `git`.
 
 
 ## Install
@@ -81,11 +83,11 @@ $ ./gen
 
 Usage and available commands will be shown.
 
-If added to bin, this can be run from anywhere. This is not ready yet as the script needs to know its own path.
+If added to `~/bin` or similar, this can be run from anywhere. This is not ready yet as the script needs to know its own path.
 
-This is actually like a `Makefile` - which would be easier to bundle commands and run short aliases.
 
 ### Configure, install and update
+> Commands which change the state of the system and packages
 
 Follow the steps below in order. Note - no `.sh` is needed.
 
@@ -111,7 +113,7 @@ These are intended for a fresh install but they can be run repeatedly if needed,
 
 ### Checks
 
-Run these at any time.
+Run these at any time as they only read data.
 
 Update _all_ APT packages.
 
@@ -122,13 +124,13 @@ Update _all_ APT packages.
 Clear space in the APT cache and autoremove unneeded packages.
 
 ```sh
-./gen clean.sh
+./gen clean
 ```
 
-Check versions.
+Check installed versions of packages of interest.
 
 ```sh
-./gen audit.sh
+./gen audit
 ```
 
 
@@ -143,4 +145,3 @@ Updates can be managed from within VS Code after that.
 ## License
 
 Released under [MIT](/LICENSE).
-

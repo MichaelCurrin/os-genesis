@@ -54,9 +54,12 @@ echo
 echo 'PYTHON'
 
 # -dev - include C headers for compiling extensions - needed for lxml.
+# -venv - Although venv module is now standard, this package is needed to install ensurepip
+#         otherwise you get an error running python -m venv
 install \
   python3 \
-  python3-dev
+  python3-dev \
+  python3-venv
 echo '---'
 echo
 

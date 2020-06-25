@@ -1,6 +1,9 @@
 # OS Genesis
 > Automate config and package management on a dev laptop
 
+<p align="center">
+    <img src="logo.png" width="180px">
+</p>
 
 ## Purpose
 
@@ -50,7 +53,7 @@ Download the zipped repo by clicking the download link:
 
 Then unzip it using a GUI to `~/repos`.
 
-You could use `curl` and `unzip` too.
+You could use `curl` and `unzip` too if those are installed.
 
 #### Clone
 
@@ -139,7 +142,6 @@ Check installed versions of packages of interest.
 Follow [Install VS Code](/docs/install-vs-code.md) guide to install from a Debian package.
 
 Updates can be managed from within VS Code after that.
-
 
 
 ## License

@@ -121,19 +121,19 @@ Run these at any time as they only read data.
 Update _all_ APT packages.
 
 ```sh
-./gen upgrade
+$ ./gen upgrade
 ```
 
 Clear space in the APT cache and autoremove unneeded packages.
 
 ```sh
-./gen clean
+$ ./gen clean
 ```
 
 Check installed versions of packages of interest.
 
 ```sh
-./gen audit
+$ ./gen audit
 ```
 
 
@@ -141,7 +141,7 @@ Check installed versions of packages of interest.
 
 Follow [Install VS Code](/docs/install-vs-code.md) guide to install from a Debian package.
 
-Updates can be managed from within VS Code after that.
+Updates to VS Code can be managed from within the application after that.
 
 
 ## License

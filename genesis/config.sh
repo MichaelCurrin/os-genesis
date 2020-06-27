@@ -3,7 +3,7 @@
 echo 'Configure system'
 echo
 
-set -e -x
+set -e
 
 # NODE / NPM
 

@@ -24,5 +24,5 @@ echo
 go --version
 echo
 
-rust --version
+rustc --version
 echo

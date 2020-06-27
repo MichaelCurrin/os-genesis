@@ -88,5 +88,12 @@ fi
 # Requires the above to be run first, otherwise you'll end up with older 10.x version.
 install nodejs
 
+# echo 'RUST'
+# if command -v 'rustc -V' /dev/null 2>&1; then
+#   rustup update
+# else
+#   curl https://sh.rustup.rs -sSf | sh
+# fi
+
 unset -f install
 echo 'DONE'

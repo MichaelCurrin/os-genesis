@@ -12,7 +12,6 @@ install() {
 }
 
 echo 'UPDATE'
-# -q ?
 sudo apt update
 echo '---'
 echo
@@ -63,8 +62,31 @@ install \
 gem install bundler --user-install
 # Follow the warning that ~/.gem/ruby/2.7.0/bin must be in PATH.
 
-echo 'NODE'
-# Requires configure.sh to be run first, otherwise you'll end up with older 10.x version.
+echo 'NODE / NPM'
+
+if command -v node >/dev/null 2>&1; then
+  echo 'Already installed'
+  echo 'Use apt to upgrade it or update nodesource to get newer than 14.x'
+else
+  echo 'Adding Node to deb sources and installing'
+  # Setup Debian repo for Node.js
+  # Copied from:
+  #     https://nodejs.org/en/download/package-manager/
+  #     https://github.com/nodesource/distributions/blob/master/README.md
+  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+fi
+
+# Output from above:
+#
+# ## You may also need development tools to build native addons:
+#      sudo apt-get install gcc g++ make
+# ## To install the Yarn package manager, run:
+#      curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+#      echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+#      sudo apt-get update && sudo apt-get install yarn
+
+# Requires the above to be run first, otherwise you'll end up with older 10.x version.
 install nodejs
 
+unset -f install
 echo 'DONE'

@@ -5,7 +5,7 @@ echo
 
 set -e
 
-# NODE / NPM
+echo 'NODE / NPM'
 
 # The directory /usr/local/npm and /usr/local/node_modules
 # are owned by root so a global
@@ -23,8 +23,9 @@ npm config set prefix ~/npm
 
 # Disable post-install scripts for security.
 npm config set ignore-scripts true
+echo
 
-# DENO
+echo 'DENO'
 
 if command -v deno >/dev/null 2>&1; then
   deno upgrade

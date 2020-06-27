@@ -22,20 +22,21 @@ Here's the download thank you page / getting started page. It has resources but 
 
 ## Install with command-line
 
-https://code.visualstudio.com/docs/setup/linux
+- https://code.visualstudio.com/docs/setup/linux
  
 
-Download .deb file
+Download `.deb` file
 
 ```sh
-cd ~/Downloads 
-wget 'https://go.microsoft.com/fwlink/?LinkID=760868'
-ls ~/Downloads
+$ cd ~/Downloads 
+$ wget 'https://go.microsoft.com/fwlink/?LinkID=760868'
+$ ls ~/Downloads
 ```
 
-Then run 
+Then run:
+
 ```sh
-$ sudo apt install ./<file>.deb
+$ sudo apt install PATH
 ```
 
-Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager.
+Installing the `.deb` package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager.

@@ -4,15 +4,18 @@
 
 ## Basic
 
-- Linux Lite setup
-- Encrypted hard drive
-- US lang
+- Insert disc and boot up
+- Select to encrypted hard drive
+- Choose US language
 
 
 ## System config
 
+Once logged in, set these up:
+
 - Power manager under settings. Turn on notifications and tray icon.
-- /etc/hosts
+- Edit `/etc/hosts`
+- Optionally run `sudo visudo` and disable requiring password for `sudo` commands.
 
 
 ## Install

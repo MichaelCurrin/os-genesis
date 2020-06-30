@@ -16,6 +16,9 @@ sudo apt update
 echo '---'
 echo
 
+echo '### START INSTALLS ###'
+echo
+
 echo 'STANDARD'
 # These are included on Linux Lite but include anyway to keep them.
 install \
@@ -40,10 +43,14 @@ install \
   dropbox \
   redshift # Add warm screen tint.
 
+###
+
 echo 'BROWSER'
 install firefox
 # Driver for web scraping or automated testing.
 # install firefox-geckodriver
+
+###
 
 echo 'PYTHON'
 # -dev - include C headers for compiling extensions - needed for lxml.
@@ -54,18 +61,24 @@ install \
   python3-dev \
   python3-venv
 
+###
+
 echo 'RUBY'
 install \
   ruby \
   ruby-dev \
   ruby-full
+  
 gem install bundler --user-install
-# Follow the warning that ~/.gem/ruby/2.7.0/bin must be in PATH.
+# Expect warning: ~/.gem/ruby/2.7.0/bin must be in PATH.
+
+###
 
 echo 'NODE / NPM'
 
 if command -v node >/dev/null 2>&1; then
-  echo 'Already installed'
+  node -v
+  npm -v
   echo 'Use apt to upgrade it or update nodesource to get newer than 14.x'
 else
   echo 'Adding Node to deb sources and installing'
@@ -88,12 +101,22 @@ fi
 # Requires the above to be run first, otherwise you'll end up with older 10.x version.
 install nodejs
 
+###
+
 # echo 'RUST'
+
 # if command -v 'rustc -V' /dev/null 2>&1; then
-#   rustup update
+#   rustc -V
 # else
+#   # This works on macOS and Linux.
 #   curl https://sh.rustup.rs -sSf | sh
+#   # OR
+#   # install rust-src
 # fi
+# Expect this to be in PATH:
+#   ~/.cargo/bin
+
+###
 
 unset -f install
 echo 'DONE'

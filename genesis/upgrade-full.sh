@@ -11,3 +11,5 @@ set -e
 sudo apt update
 
 sudo apt full-upgrade -y
+
+# TODO run non-apt commands in upgrade.sh

@@ -68,9 +68,10 @@ install \
   ruby \
   ruby-dev \
   ruby-full
-  
+
 gem install bundler --user-install
 # Expect warning: ~/.gem/ruby/2.7.0/bin must be in PATH.
+# TODO bundle update bundle (check)
 
 ###
 
@@ -99,13 +100,29 @@ fi
 #      sudo apt-get update && sudo apt-get install yarn
 
 # Requires the above to be run first, otherwise you'll end up with older 10.x version.
+# This may not be needed as it is runs an apt install of package already installed.
+# And the upgrade script uses APT to take care of upgrades within 14.x
 install nodejs
+
+###
+
+echo 'DENO'
+
+if command -v deno >/dev/null 2>&1; then
+  echo 'Deno is already installed'
+  deno --version
+else
+  echo 'Installing deno'
+  curl -fsSL https://deno.land/x/install/install.sh | sh
+fi
+# NB. Make sure $HOME/.deno/bin is in PATH.
 
 ###
 
 # echo 'RUST'
 
 # if command -v 'rustc -V' /dev/null 2>&1; then
+#   echo 'Rust is already installed'
 #   rustc -V
 # else
 #   # This works on macOS and Linux.

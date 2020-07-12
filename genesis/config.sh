@@ -14,6 +14,7 @@ echo 'NODE / NPM'
 # https://www.gurustop.net/blog/2015/01/12/sudo-npm-install-g-global-mac-ubuntu-linux-windows
 # Note that ~/.npm already exists.
 npm config set prefix ~/npm
+# TODO does this apply independely of node version installed or get overridden?
 
 # NB. Make sure $HOME/npm/bin is in PATH.
 
@@ -24,13 +25,3 @@ npm config set prefix ~/npm
 # Disable post-install scripts for security.
 npm config set ignore-scripts true
 echo
-
-echo 'DENO'
-
-if command -v deno >/dev/null 2>&1; then
-  deno upgrade
-else
-  echo 'Installing deno'
-  curl -fsSL https://deno.land/x/install/install.sh | sh
-fi
-# NB. Make sure $HOME/.deno/bin is in PATH.

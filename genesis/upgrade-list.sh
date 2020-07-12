@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo 'Upgradeable'
+echo 'Upgradeable APT packages'
 echo
 
 set -e

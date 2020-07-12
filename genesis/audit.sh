@@ -17,12 +17,19 @@ echo "Node - $(node -v)"
 echo "NPM - $(npm -v)"
 echo
 
+echo 'RUBY'
 ruby --version
 bundler --version
 echo
 
+echo 'GO'
 go --version
 echo
 
+echo 'RUST'
 rustc --version
+echo
+
+echo 'DENO'
+deno --version
 echo

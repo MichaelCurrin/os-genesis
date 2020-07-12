@@ -20,7 +20,6 @@ Once logged in, set these up:
 
 ## Install
 
-
 ### Browser
 
 - Setup Firefox settings
@@ -52,11 +51,10 @@ These are from the Software installer GUI.
 - Webcam Software
 
 
-Follow my install and config steps ins os-genesis including install git and VS Code
+Follow my install and config steps ins os-genesis including install git and VS Code.
 
 
 ## Configure
-
 
 ### SSH
 

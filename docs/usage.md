@@ -70,21 +70,22 @@ Follow [Install VS Code](/docs/install-vs-code.md) guide to install from a Debia
 Updates to VS Code can be managed from within the application after that.
 
 
-
-
 ## Schedule tasks
 > How to schedule cron jobs to run CLI commands
+
+<!-- This could be moved to a separate section even as Configure, but it must follow Usage/CLI -->
 
 Tasks to add to your to `cron.daily` directory or your `crontab` file.
 
 Either add `gen` to yaour bin executables directory, or use the full path to the executable.
-
 
 ### Manage packages
 
 Add a cron task to ensure that installed packages are updated on schedule without your interaction needed - note there is a risk of things breaking. 
 
 If your system gives a pop-up prompt to update packages, you may prefer to use that.
+
+<!-- TODO: git pull, or checkout latest tag, both as options, ideally through gen CLI -->
 
 ```sh
 gen install

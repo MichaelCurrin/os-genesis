@@ -13,7 +13,11 @@ If you're just here to see what APT packages I install using a Bash script, see 
 
 This project focussed on _packages_ - it does not support "dotfiles" as I have separate project for that.
 
-Going with the DevOps/Ansible lingo, this project handles environment _orchestration_, though just on the host machine. It becomes automation when added to a cron job.
+Going with the DevOps/Ansible lingo, this project handles environment _orchestration_ (though in this case just a single host machine). 
+
+The project specifies the state of packages to be installed and configured and running the scripts makes it happen. This saves time having to research or rememeber the commands and run them.
+
+Further, this project works well with a layer of [automation](#automation), as covered in a later section.
 
 
 ## Features
@@ -22,7 +26,7 @@ Going with the DevOps/Ansible lingo, this project handles environment _orchestra
 - Start from scratch such as a new laptop or a fresh of an OS.
 - Reproducible and consistent setup which is managed in the cloud (as a Github repo).
 - Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or simiar.
-- Run manually or on a cron job to ensure packages are up to dat. 
+- Run manually or on a cron job to ensure packages are up to date. 
 - Keep multiple machines in sync by updating the repo on Github.
 
 
@@ -71,7 +75,6 @@ $ git clone git@github.com:MichaelCurrin/os-genesis.git
 
 
 ## Usage
-
 
 Navigate to the project root.
 
@@ -136,12 +139,50 @@ Check installed versions of packages of interest.
 $ ./gen audit
 ```
 
-
 ### Install IDE
 
 Follow [Install VS Code](/docs/install-vs-code.md) guide to install from a Debian package.
 
 Updates to VS Code can be managed from within the application after that.
+
+
+## Automate
+> Schedule cron jobs
+
+Tasks to add to your to `cron.daily` directory or your `crontab` file.
+
+Either add `gen` to yaour bin executables directory, or use the full path to the executable.
+
+
+### Manage packages
+
+Add a cron task to ensure that installed packages are updated on schedule without your interaction needed - note there is a risk of things breaking. 
+
+If your system gives a pop-up prompt to update packages, you may prefer to use that.
+
+```sh
+gen install
+```
+
+If you want this too:
+
+```sh
+gen install-optional
+```
+
+### Update package versions
+
+Add a cron task to run certain project scripts to ensure the system's packages and configuration matches what is in the latest GitHub release.
+
+```sh
+gen upgrade
+```
+
+Or this.
+
+```sh
+gen upgrade-full
+```
 
 
 ## License

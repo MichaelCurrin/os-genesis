@@ -33,10 +33,10 @@ Install APT packages - [install.sh](/genesis/install.sh)
 $ ./gen install
 ```
 
-Install optional packages - [optional.sh](/genesis/optional.sh)
+Install optional packages - [optional.sh](/genesis/install-optional.sh)
 
 ```sh
-$ ./gen optional
+$ ./gen install-optional
 ```
 
 These are intended for a fresh install but they can be run repeatedly if needed, such as if this scripts are updated or something that was uninstalled manually needs to be installed again.

@@ -1,5 +1,5 @@
 # OS Genesis
-> Automate config and package management on a dev laptop
+> Shell scripting tool to setup and manage packages on a developer's Linux laptop
 
 <p align="center">
     <img src="logo.png" width="180px">
@@ -9,6 +9,7 @@
 ## Documentation
 
 See [Docs](/docs/index.md).
+
 
 
 ## License

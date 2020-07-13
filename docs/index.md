@@ -1,12 +1,16 @@
 # OS Genesis documentation
 >  Shell scripting tool to setup and manage packages on a developer's Linux laptop
 
+<p align="center">
+    <img src="docs/logo.png" width="180px">
+</p>
+
 Making dev environment setup and package management fast, easily, reproducible and visible in version control.
 
 
 ## Sample usage
 
-There are no external dependencies. 
+There are no external dependencies.
 
 Just download the zip from the [latest release](https://github.com/MichaelCurrin/os-genesis/tags) or clone.
 

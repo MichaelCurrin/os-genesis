@@ -2,7 +2,7 @@
 > Shell scripting tool to setup and manage packages on a developer's Linux laptop
 
 <p align="center">
-    <img src="logo.png" width="180px">
+    <img src="docs/logo.png" width="180px">
 </p>
 
 

@@ -12,24 +12,22 @@ There are no other system dependencies - you don't even need `git`.
 
 ## Download the project
 
-```sh
-$ mkdir -p ~/repos
-$ cd ~/repos
-```
+### Download archive
 
-### Download
+Download an archive of latest master (not necessarily latest tag):
 
-Download the zipped repo by clicking the download link:
+[![Download zip](https://img.shields.io/badge/📦_Download-master.zip-green?style=for-the-badge)](https://github.com/MichaelCurrin/os-genesis/archive/master.zip) [![Download tarball](https://img.shields.io/badge/📦_Download-master.tar.gz-green?style=for-the-badge)](https://github.com/MichaelCurrin/os-genesis/archive/master.tar.gz)
 
-- [Download os-genesis zip](https://github.com/MichaelCurrin/os-genesis/archive/master.zip)
+Open the archive to unzip it with a program (Linux usually comes with a GUI).
 
-Then unzip it using a GUI to `~/repos`.
+Put the folder somewhere you can run it from. e.g. `~/repos`.
 
-You could use `curl` and `unzip` too if those are installed.
 
 ### Clone
 
-Or clone, if you have `git` or  - `sudo apt install -y git`
+Clone the repo (or your fork) with `git`.
+
+On a fresh install, you'll need `sudo apt install -y git` first.
 
 ```sh
 $ git clone https://github.com/MichaelCurrin/os-genesis.git

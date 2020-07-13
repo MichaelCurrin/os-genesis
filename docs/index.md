@@ -1,40 +1,22 @@
-# OS Genesis documentation
+# OS Genesis documentation 🌏🧬🏗💻
 >  Shell scripting tool to setup and manage packages on a developer's Linux laptop
 
 <p align="center">
-    <img src="docs/logo.png" width="180px">
+    <img src="logo.png" width="180px">
 </p>
 
-Making dev environment setup and package management fast, easily, reproducible and visible in version control.
+Bootstrap a fresh Linux installation to make it ready for development and then maintain the packages and package configuration
 
+This project aims to make this fast, easily, reproducible and visible in version control (with history).
 
-## Sample usage
-
-There are no external dependencies.
-
-Just download the zip from the [latest release](https://github.com/MichaelCurrin/os-genesis/tags) or clone.
-
-Then run the `gen` script with options, either manually or on schedule to keep your dev environment synced with this repo (or your fork).
-
-### Install packages
-
-Use APT to install packages like Python and Ruby.
-
-```sh
-./gen install
-```
-
-This also covers packages like NodeJS, Rust and Go which can be setup with APT, or with a manual install (using `curl URL | sh`).
-
-### Update packages
-
-```sh
-./gen upgrade
-```
+This is for my own use, but others can use this project, a fork of it or just use this as reference on how to install/update packages (with and without APT).
 
 
 ## Menu
 
+Intro to the project:
+
+- [Sample usage](sample-usage.md)
 - [About](about.md)
 
 These docs deal directly with using this project:

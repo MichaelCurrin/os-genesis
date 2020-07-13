@@ -1,12 +1,16 @@
 # OS Genesis documentation
-> Automate config and package management on a dev laptop
+>  Shell scripting tool to setup and manage packages on a developer's Linux laptop
+
+Making dev environment setup and package management fast, easily, reproducible and visible in version control.
 
 
 ## Sample usage
 
 There are no external dependencies. 
 
-Just download the latest release (or fork) and then run the `gen` script with options, either manually or on schedule to keep your dev environment synced with this repo (or your fork).
+Just download the zip from the [latest release](https://github.com/MichaelCurrin/os-genesis/tags) or clone.
+
+Then run the `gen` script with options, either manually or on schedule to keep your dev environment synced with this repo (or your fork).
 
 ### Install packages
 

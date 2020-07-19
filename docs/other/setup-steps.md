@@ -1,41 +1,53 @@
 # Setup steps
-> Personal notes for myself on setting up a new laptop or fresh OS install.
+
+Notes (mainly for myself) on reliably setting up a new laptop or fresh OS install using my preferred order of steps and software.
 
 
 ## Basic
 
-- Insert disc and boot up
-- Select to encrypted hard drive
-- Choose US language
+1. Write OS to DVD-R or flash drive
+1. Turn off machine
+1. Insert disc
+1. Boot up
+1. Follow install steps. In particular:
+	1. Select to **encrypt** hard drive with a password
+	1. Choose **US** language
 
 
 ## System config
 
 Once logged in, set these up:
 
-- Power manager under settings. Turn on notifications and tray icon.
-- Edit `/etc/hosts`
-- Optionally run `sudo visudo` and disable requiring password for `sudo` commands.
+- Connect to WiFi
+- Power manager under settings. 
+	- Turn on _notifications_ and _tray icon_.
+- Setup network
+	- Edit `/etc/hosts` and setup my machines. This can happen later when I need it.
+- Optionally disable requiring password for `sudo` commands.
+	- Run `sudo visudo` 
+	- Set
+		```
+		%michael ALL=(ALL) NOPASSWD:ALL
+		```
 
 
 ## Install
 
-### Browser
+### Setup browser
 
 - Setup Firefox settings
+- Install LastPass - [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/)
 - Setup Firefox sync
-- Extensions
-- 	LastPass
-	- https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/
+	- Login using password in LastPass
+	- Remaining extensions will be installed using sync
 
+### Install packages
 
-### Packages
+Follow instructions in [README.md](https:/github.com/michaelcurrin/os-genesis#readme) to run the `install.sh` script. Be sure to keep that up to date as new packages are installed.
 
-Follow instructions in [README.md](/README.md) to run the `install.sh` script. Be sure to keep that up to date as new packages are installed.
+See also on Linux Lite - Software installer GUI (a few packages) or package manager (many packages) or `apt`
 
-See also on Linux Lite - Software installer GUI (a few packages) or package manager (many packages) or apt
-
-These are from the Software installer GUI.
+These are from the Software installer GUI and some are covered in the `install.sh` script.
 
 - Etcher
 	- balena-etcher-electron/unknown 1.5.95 amd64
@@ -45,32 +57,36 @@ These are from the Software installer GUI.
 - Music player
 - Nitroshare - transfer between files on network.
 - Password manager
-- Redshift - screen temp. `redshift/focal`
+- Redshift - screen temperature. Enable _Autostart_ using the tray icon.
 - Steam
-- Tor
+- Tor browser
 - Webcam Software
 
 
-Follow my install and config steps ins os-genesis including install git and VS Code.
+### Start on boot
+
+To ensure software starts on startup (like `yakuake`), set these up under Settings. 
+
+For Linux Lite, go to Sessions and Startup in the start menu.
 
 
 ## Configure
 
 ### SSH
 
-Follow my cookbook to setup SSH for Github.
+Follow my cookbook page to setup SSH for Github.
 
-- https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/all-github-access.md
+- [SSH - All GitHub Access](https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/all-github-access.md)
 
 
 ## Shell config setup
 
-This is a private repo so needs SSH credentials.
+This is a **private** repo so needs SSH credentials.
 
 ```sh
-mkdir -p repos
-git clone git@github.com:MichaelCurrin/shell-dev-setup.git
-cd shell-dev-setup
+$ mkdir -p repos
+$ git clone git@github.com:MichaelCurrin/shell-dev-setup.git
+$ cd shell-dev-setup
 ```
 
 Then follow the README.

@@ -8,9 +8,8 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/os-genesis)](https://github.com/MichaelCurrin/os-genesis/tags/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-
 <p align="center">
-    <img src="/docs/logo.svg">
+    <img src="logo.svg" height="150px">
 </p>
 
 

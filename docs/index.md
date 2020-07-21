@@ -6,7 +6,7 @@
 [![Made for Linux](https://img.shields.io/badge/Made_for-Linux_🐧-blue.svg)](https://www.linux.org/)
 
 <p align="center">
-    <img src="logo.svg">
+    <img src="logo.svg" height="150px">
 </p>
 
 Bootstrap a fresh Linux installation to make it ready for development and then maintain the packages and package configuration

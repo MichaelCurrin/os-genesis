@@ -21,7 +21,7 @@ TODO: If added to `~/bin` or similar, this can be run from anywhere. - This is n
 
 Follow the steps below in order. Note - no `.sh` is needed.
 
-Configure Debian package sources - [configure.sh](.genesis/configure.sh).
+Configure system [configure.sh](/genesis/config.sh). This script does not do a lot.
 
 ```sh
 $ ./gen configure
@@ -32,6 +32,8 @@ Install APT packages - [install.sh](/genesis/install.sh)
 ```sh
 $ ./gen install
 ```
+
+Note - this project will _not_ uninstall packages if they are removed from the install script, so you'll need to manually clean-up with `sudo apt remove PACKAGE` after packages are removed.
 
 Install optional packages - [optional.sh](/genesis/install-optional.sh)
 
@@ -51,7 +53,7 @@ Update _all_ APT packages.
 $ ./gen upgrade
 ```
 
-Clear space in the APT cache and autoremove unneeded packages.
+Clear space in the APT cache and auto-remove unneeded packages.
 
 ```sh
 $ ./gen clean
@@ -62,6 +64,7 @@ Check installed versions of packages of interest.
 ```sh
 $ ./gen audit
 ```
+
 
 ## Install IDE
 
@@ -77,24 +80,24 @@ Updates to VS Code can be managed from within the application after that.
 
 Tasks to add to your to `cron.daily` directory or your `crontab` file.
 
-Either add `gen` to yaour bin executables directory, or use the full path to the executable.
+Either add `gen` to your bin executables directory, or use the full path to the executable.
 
 ### Manage packages
 
-Add a cron task to ensure that installed packages are updated on schedule without your interaction needed - note there is a risk of things breaking. 
+Add a cron task to ensure that installed packages are updated on schedule without your interaction needed - note there is a risk of things breaking.
 
 If your system gives a pop-up prompt to update packages, you may prefer to use that.
 
 <!-- TODO: git pull, or checkout latest tag, both as options, ideally through gen CLI -->
 
 ```sh
-gen install
+$ gen install
 ```
 
 If you want this too:
 
 ```sh
-gen install-optional
+$ gen install-optional
 ```
 
 ### Update package versions
@@ -102,11 +105,11 @@ gen install-optional
 Add a cron task to run certain project scripts to ensure the system's packages and configuration matches what is in the latest GitHub release.
 
 ```sh
-gen upgrade
+$ gen upgrade
 ```
 
 Or this.
 
 ```sh
-gen upgrade-full
+$ gen upgrade-full
 ```

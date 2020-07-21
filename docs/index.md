@@ -1,4 +1,4 @@
-# OS Genesis documentation 🌏🧬🏗💻
+# OS Genesis documentation 🌏 🧬 🏗 💻
 >  Shell scripting tool to setup and manage packages on a developer's Linux laptop
 
 [![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue.svg)](https://www.gnu.org/software/bash/)
@@ -6,7 +6,7 @@
 [![Made for Linux](https://img.shields.io/badge/Made_for-Linux_🐧-blue.svg)](https://www.linux.org/)
 
 <p align="center">
-    <img src="logo.png" width="180px">
+    <img src="logo.svg">
 </p>
 
 Bootstrap a fresh Linux installation to make it ready for development and then maintain the packages and package configuration

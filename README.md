@@ -1,4 +1,4 @@
-# OS Genesis 🌏🧬🏗💻
+# OS Genesis 🌏 🧬 🏗 💻
 > Shell scripting tool to setup and manage packages on a developer's Linux laptop
 
 [![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue.svg)](https://www.gnu.org/software/bash/)
@@ -10,7 +10,7 @@
 
 
 <p align="center">
-    <img src="docs/logo.png" width="180px">
+    <img src="logo.svg">
 </p>
 
 

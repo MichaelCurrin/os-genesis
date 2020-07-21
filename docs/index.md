@@ -1,5 +1,5 @@
-# OS Genesis documentation 🌏 🧬 🏗 💻
->  Shell scripting tool to setup and manage packages on a developer's Linux laptop
+# Documentation 🌏 🧬 🏗 💻
+> Get back control over your dev environment - orchestrate package management on a Linux machine
 
 [![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue.svg)](https://www.gnu.org/software/bash/)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-blue.svg)](https://www.gnu.org/software/bash/)
@@ -8,6 +8,8 @@
 <p align="center">
     <img src="logo.svg" height="150px">
 </p>
+
+A shell-based tool to automate management system packages on a Linux machine - the shell scripts in this repo act as a central configuration of packages to install and update.
 
 Bootstrap a fresh Linux installation to make it ready for development and then maintain the packages and package configuration
 

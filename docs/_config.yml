@@ -1,7 +1,8 @@
-title: OS Genesis 🌏 🧬 🏗 💻
-description: Automate config and package management on a dev laptop
-google_analytics: 
+title: ./gen 🌏 🧬 🏗 💻
+description: Get back control over your dev environment - orchestrate package management on a Linux machine
+
 show_downloads: true
+
 theme: jekyll-theme-architect
 
 gems:

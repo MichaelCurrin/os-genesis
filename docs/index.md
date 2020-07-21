@@ -36,3 +36,4 @@ These docs notes for myself on how to setup a machine from scratch.
 
 - [Setup steps](setup-steps.md)
 - [Tips](tips.md)
+- [macOS](mac-os.md)

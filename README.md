@@ -10,7 +10,7 @@
 
 
 <p align="center">
-    <img src="logo.svg">
+    <img src="/docs/logo.svg">
 </p>
 
 

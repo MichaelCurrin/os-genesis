@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 <p align="center">
-    <img src="logo.svg" height="150px">
+    <img src="/docs/logo.svg" height="150px">
 </p>
 
 

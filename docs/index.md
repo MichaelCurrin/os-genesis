@@ -1,5 +1,4 @@
-# Documentation 🌏 🧬 🏗 💻
-> Get back control over your dev environment - orchestrate package management on a Linux machine
+# Homepage
 
 [![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue.svg)](https://www.gnu.org/software/bash/)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-blue.svg)](https://www.gnu.org/software/bash/)

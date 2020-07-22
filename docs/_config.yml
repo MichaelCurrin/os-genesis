@@ -7,3 +7,9 @@ theme: jekyll-theme-architect
 
 gems:
   - jekyll-mentions
+
+menu:
+  - sample-usage.md
+  - about.md
+  - installation.md
+  - usage.md

@@ -12,6 +12,20 @@
     <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
 
     <style>
+        /* Force wrapping of emojis and increasing spacing between h1 rows. */
+        header h1 {
+          width: 400px;  
+          line-height: 1.1.em;
+        }
+        
+        header h2 {
+          width: 100%;   
+        }
+        
+        #main-content h1 {
+          padding-bottom: 0.4em;   
+        }
+        
         nav > ul > li {
           font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
           font-size: 2em;

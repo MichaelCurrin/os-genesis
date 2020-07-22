@@ -17,8 +17,7 @@
 
 ## Documentation
 
-See [Docs](/docs/index.md).
-
+[![View site GH Pages](https://img.shields.io/badge/GH_Pages-Read_the_docs-blue?style=for-the-badge)](https://michaelcurrin.github.io/os-genesis/)
 
 
 ## License

@@ -1,0 +1,22 @@
+# Core package installation
+pip
+setuptools
+wheel
+
+# Formatting and linting tools
+# These help VS Code when there is no virtual environment.
+autopep8
+black
+isort
+mypy
+pylint
+
+# IPython
+ipython
+ipykernel # For Jupyter Notebooks in VS Code.
+
+# Other
+mkdocs
+Pygments
+toml
+PyYAML

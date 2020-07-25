@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo 'Optional installs'
 echo
+# The packages here support the packages in install.sh and may not be needed.
 
 set -e
 

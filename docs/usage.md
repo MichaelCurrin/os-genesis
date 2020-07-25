@@ -94,10 +94,16 @@ If your system gives a pop-up prompt to update packages, you may prefer to use t
 $ gen install
 ```
 
-If you want this too:
+Optionally run this too:
 
 ```sh
 $ gen install-optional
+```
+
+Install or upgrade global Python packages.
+
+```sh
+$ gen py-packages
 ```
 
 ### Update package versions

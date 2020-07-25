@@ -17,6 +17,5 @@ ipykernel # For Jupyter Notebooks in VS Code.
 
 # Other
 mkdocs
-Pygments
 toml
 PyYAML

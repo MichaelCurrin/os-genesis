@@ -12,7 +12,7 @@ help() {
   echo
   echo 'The COMMAND arg must be one of:'
   echo
-  ls -1 genesis | sed 's/.sh//'
+  (cd genesis && ls -1 *.sh | sed 's/.sh//')
 
   echo
   echo 'Options:'

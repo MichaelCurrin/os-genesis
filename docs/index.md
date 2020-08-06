@@ -8,13 +8,13 @@
     <img src="logo.svg" height="150px">
 </p>
 
-A shell-based tool to automate management system packages on a Linux machine - the shell scripts in this repo act as a central configuration of packages to install and update.
+A shell-based tool to automate management system packages on a Linux machine - the shell scripts in this repo act as a central configuration of packages to install and update. If your machine breaks down or you get a new one - no worries, your dev environment can be rebuilt using this repo.
 
-Bootstrap a fresh Linux installation to make it ready for development and then maintain the packages and package configuration
+This can ootstrap a fresh Linux installation to make it ready for development and then after that also be used maintain the packages and package configuration.
 
-This project aims to make this fast, easily, reproducible and visible in version control (with history).
+This project aims to make this fast, easily, reproducible and visible in version control (so there is a history of what package names and config values you used that can be read on GitHub).
 
-This is for my own use, but others can use this project, a fork of it or just use this as reference on how to install/update packages (with and without APT).
+This is for my own use, but others can use this project, a fork of it or just use this as reference on how to install/update packages.
 
 
 ## Intro

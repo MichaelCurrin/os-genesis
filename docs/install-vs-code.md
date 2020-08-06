@@ -61,3 +61,7 @@ Note whenever you do a system update like this, VS Code will also be included.
 ```sh
 $ sudo apt upgrade
 ```
+
+Then `gen upgrade` command will perform that.
+
+Avoid running either upgrade command inside VS Code's terminal, otherwise this will quit VS Code before all updates are done.

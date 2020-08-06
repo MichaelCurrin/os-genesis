@@ -69,9 +69,12 @@ install \
   ruby-dev \
   ruby-full
 
-gem install bundler --user-install
+if ! command -v bundler /dev/null 2>&1; then
+  gem install bundler --user-install
 # Expect warning: ~/.gem/ruby/2.7.0/bin must be in PATH.
-# TODO bundle update bundle (check)
+else
+  gem update bundler --user-install
+fi
 
 ###
 

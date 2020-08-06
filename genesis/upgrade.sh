@@ -7,7 +7,7 @@ set -e
 
 sudo apt update
 
-sudo apt upgrade -y
+sudo apt upgrade -y -q
 
 if command -v deno >/dev/null 2>&1; then
   deno upgrade

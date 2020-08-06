@@ -23,5 +23,17 @@ npm config set prefix ~/npm
 # /home/michael/node_modules/.bin
 
 # Disable post-install scripts for security.
-npm config set ignore-scripts true
+#
+# UPDATE this also disables `npm run` from working.
+# I checked using --verbose flag
+#   ignored because ignore-scripts is set to true typescript-quickstart@
+#
+# Researched:
+#   https://github.com/npm/npm/issues/10675
+#
+# But you can use this maybe on an alias.
+#   npm i -S --ignore-scripts PACKAGE
+#
+#npm config set ignore-scripts true
+
 echo

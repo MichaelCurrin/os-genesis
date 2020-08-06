@@ -3,6 +3,12 @@
 echo 'Install packages'
 echo
 
+# Note use of:
+#   command -v COMMAND
+# to check if a package is installed.
+# Here is the flag:
+#  -v    print a description of COMMAND similar to the `type' builtin
+
 set -e
 
 install() {
@@ -54,11 +60,13 @@ install firefox
 
 echo 'PYTHON'
 # -dev - include C headers for compiling extensions - needed for lxml.
+# -pip - this somehow got removed from my machine so I added it back.
 # -venv - Although venv module is now standard, this package is needed to install ensurepip
 #         otherwise you get an error running python -m venv
 install \
   python3 \
   python3-dev \
+  python3-pip \
   python3-venv
 
 ###
@@ -83,7 +91,7 @@ echo 'NODE / NPM'
 if command -v node >/dev/null 2>&1; then
   node -v
   npm -v
-  echo 'Use apt to upgrade it or update nodesource to get newer than 14.x'
+  echo 'Use gen or apt to upgrade it. Update nodesource to get newer than 14.x'
 else
   echo 'Adding Node to deb sources and installing'
   # Setup Debian repo for Node.js
@@ -130,8 +138,7 @@ fi
 # else
 #   # This works on macOS and Linux.
 #   curl https://sh.rustup.rs -sSf | sh
-#   # OR
-#   # install rust-src
+#   # Alternatively use the rust-src APT package.
 # fi
 # Expect this to be in PATH:
 #   ~/.cargo/bin

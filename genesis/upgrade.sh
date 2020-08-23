@@ -18,11 +18,22 @@ if command -c bundler >/dev/null 2>&1; then
   gem update bundler --user-install
 fi
 
-echo 'Non-APT packages'
+echo
+echo 'DENO'
 
 if command -v deno >/dev/null 2>&1; then
   deno upgrade
 fi
 
+# echo
+# echo 'RUST'
+
 # TODO
 # rustup update
+
+echo
+echo 'YARN'
+
+if command -v yarn >/dev/null 2>&1; then
+  npm upgrade -g yarn
+fi

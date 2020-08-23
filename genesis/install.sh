@@ -23,8 +23,8 @@ echo '---'
 echo
 
 echo '### START INSTALLS ###'
-echo
 
+echo
 echo 'STANDARD'
 # These are included on Linux Lite but include anyway to keep them.
 install \
@@ -36,6 +36,7 @@ install \
   make \
   thunderbird
 
+echo
 echo 'DEV TOOLS'
 install \
   git \
@@ -44,6 +45,7 @@ install \
   wget \
   yakuake
 
+echo
 echo 'PRODUCTIVITY TOOLS'
 install \
   dropbox \
@@ -51,6 +53,7 @@ install \
 
 ###
 
+echo
 echo 'BROWSER'
 install firefox
 # Driver for web scraping or automated testing.
@@ -58,6 +61,7 @@ install firefox
 
 ###
 
+echo
 echo 'PYTHON'
 # -dev - include C headers for compiling extensions - needed for lxml.
 # -pip - this somehow got removed from my machine so I added it back.
@@ -71,6 +75,7 @@ install \
 
 ###
 
+echo
 echo 'RUBY'
 install \
   ruby \
@@ -85,6 +90,7 @@ fi
 
 ###
 
+echo
 echo 'NODE / NPM'
 
 if command -v node >/dev/null 2>&1; then
@@ -114,8 +120,16 @@ fi
 # And the upgrade script uses APT to take care of upgrades within 14.x
 install nodejs
 
+echo
+echo 'YARN'
+
+# See also https://gist.github.com/MichaelCurrin/bdc34c554fa3023ee81449eb77375fcb
+
+npm install -g yarn
+
 ###
 
+echo
 echo 'DENO'
 
 if command -v deno >/dev/null 2>&1; then
@@ -145,4 +159,6 @@ fi
 ###
 
 unset -f install
+
+echo
 echo 'DONE'

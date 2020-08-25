@@ -10,7 +10,7 @@
 
 A shell-based tool to automate management system packages on a Linux machine - the shell scripts in this repo act as a central configuration of packages to install and update. If your machine breaks down or you get a new one - no worries, your dev environment can be rebuilt using this repo.
 
-This can ootstrap a fresh Linux installation to make it ready for development and then after that also be used maintain the packages and package configuration.
+This can bootstrap a fresh Linux installation to make it ready for development and then after that also be used maintain the packages and package configuration.
 
 This project aims to make this fast, easily, reproducible and visible in version control (so there is a history of what package names and config values you used that can be read on GitHub).
 
@@ -28,6 +28,9 @@ These docs deal directly with using this project:
 
 - [Installation](installation.md)
 - [Usage](usage.md)
+
+For packages like Go and Rust, there are flows which use the system package manager or not. I discuss those in a [blog post here](https://michaelcurrin.github.io/coding-blog/2020/08/25/package-manager-choice.html).
+
 
 ## Other notes
 

@@ -93,6 +93,7 @@ fi
 echo
 echo 'NODE / NPM'
 
+# See https://gist.github.com/MichaelCurrin/aa1fc56419a355972b96bce23f3bccba
 if command -v node >/dev/null 2>&1; then
   node -v
   npm -v

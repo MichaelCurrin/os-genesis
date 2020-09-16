@@ -3,11 +3,7 @@
 echo 'Install packages'
 echo
 
-# Note use of:
-#   command -v COMMAND
-# to check if a package is installed.
-# Here is the flag:
-#  -v    print a description of COMMAND similar to the `type' builtin
+# For use of `command`, see https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/shell/commands/command.html
 
 set -e
 
@@ -26,7 +22,7 @@ echo '### START INSTALLS ###'
 
 echo
 echo 'STANDARD'
-# These are included on Linux Lite but include anyway to keep them.
+# These are included on Linux Lite but included anyway in case they are not there future or on Ubuntu.
 install \
   curl \
   ssh \

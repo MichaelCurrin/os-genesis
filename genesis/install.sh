@@ -101,9 +101,12 @@ if command -v node >/dev/null 2>&1; then
 else
   echo 'Adding Node to deb sources and installing'
   # Setup Debian repo for Node.js
+  #
   # Copied from:
   #     https://nodejs.org/en/download/package-manager/
   #     https://github.com/nodesource/distributions/blob/master/README.md
+  #
+  # Note this requires root access, unlike Brew. If you use NVM though you don't need root access.
   curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 fi
 
@@ -123,6 +126,8 @@ install nodejs
 
 echo
 echo 'YARN'
+
+# Assume Node was installed in previous section.
 
 # See also https://gist.github.com/MichaelCurrin/bdc34c554fa3023ee81449eb77375fcb
 

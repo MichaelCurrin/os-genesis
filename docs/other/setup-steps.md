@@ -2,7 +2,7 @@
 
 Notes (mainly for myself) on reliably setting up a new laptop or fresh OS install using my preferred order of steps and software.
 
-This guide is for **Linux**.
+This guide is for **Linux**. See also my [macOS Homebrew](mac-os.md) guide.
 
 
 ## 1. Basic

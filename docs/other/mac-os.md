@@ -1,6 +1,6 @@
 # macOS reference
 
-This repo is focused on Linux, but here are some macOS commands based on what I have installed before directly or indirectly.
+This repo is focused on Linux, but here are some macOS **Homebrew** packages to install, based on what I have installed before directly or indirectly.
 
 Run `brew install PACKAGE` for any of the packages in this doc.
 

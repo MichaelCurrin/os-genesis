@@ -2,6 +2,10 @@
 
 This repo is focused on Linux, but here are some macOS **Homebrew** packages to install, based on what I have installed before directly or indirectly.
 
+First install Homebrew:
+
+- [brew.sh](https://brew.sh/)
+
 Run `brew install PACKAGE` for any of the packages in this doc.
 
 

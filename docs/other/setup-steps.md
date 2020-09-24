@@ -36,7 +36,7 @@ Once logged in, set these up:
 
 ### Setup browser
 
-- Install Firefox if not installed already. 
+- Install Firefox if not installed already. Using `firefox` APT package or Brew cask.
 - Setup Firefox settings.
 - Install LastPass - [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/).
 - Setup Firefox sync.
@@ -118,6 +118,8 @@ Make sure you have `vim` and `nano` installed.
 #### Install
 
 See [Install VS Code](install-vs-code.md) doc.
+
+If you ran the `gen install` command then you'll have VS Code setup already.
 
 #### Extensions
 

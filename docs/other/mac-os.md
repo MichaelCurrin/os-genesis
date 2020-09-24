@@ -2,10 +2,10 @@
 
 This repo is focused on Linux, but here are some macOS commands based on what I have installed before directly or indirectly.
 
+Run `brew install PACKAGE` for any of the packages in this doc.
+
 
 ## Install dev packages
-
-Run `brew install PACKAGE` for any of these.
 
 ```
 git
@@ -18,7 +18,6 @@ sphinx-doc
 
 node
 yarn # will include node
-
 
 ruby
 r
@@ -33,18 +32,14 @@ mongodb
 sqlite
 
 terraform
+
+graphicsmagick
 ```
 
+<!-- NVM? -->
 
-## Shell commands
 
-If you have problems in interactive shells with pressing arrow keys but getting escape characters.
-
-Then try solution from [here](https://stackoverflow.com/questions/893053/seeing-escape-characters-when-pressing-the-arrow-keys-in-python-shell).
-
-```sh
-$ brew install readline
-```
+## Install shell tools
 
 ```
 findutils
@@ -55,18 +50,27 @@ gcc
 wget
 ```
 
-For access to `gdate` from GNU Linux.
+If you have problems in interactive shells with pressing arrow keys but getting escape characters, then try a solution from [here](https://stackoverflow.com/questions/893053/seeing-escape-characters-when-pressing-the-arrow-keys-in-python-shell).
 
 ```sh
-brew rm coreutils && brew install coreutils
+readline
 ```
 
-## Libs
+For access to `gdate` from GNU Linux, based on research.
+
+```sh
+$ brew rm coreutils && brew install coreutils
+$ gdate
+```
+
+
+## Install libs
 
 ```
 openssl
 openssl@1.1
 ```
+
 
 ## Dump
 

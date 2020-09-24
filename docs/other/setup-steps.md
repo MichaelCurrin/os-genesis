@@ -24,8 +24,8 @@ Once logged in, set these up:
 - Setup network
 	- Edit `/etc/hosts` and setup my machines. This can happen later when I need it.
 - Optionally disable requiring password for `sudo` commands.
-	- Run `sudo visudo` 
-	- Set
+	- Run `sudo visudo`.
+	- Set this.
 		```
 		%michael ALL=(ALL) NOPASSWD:ALL
 		```
@@ -81,7 +81,7 @@ Follow my cookbook page to setup SSH for Github.
 
 ## Shell config setup
 
-This is a **private** repo so needs SSH credentials.
+This is a **private** repo. It needs SSH credentials setup.
 
 ```sh
 $ mkdir -p repos
@@ -93,15 +93,22 @@ Then follow the README.
 
 Put off doing commits until that it setup so that git config has email and username.
 
+## IDE
 
-## VS Code
+### VS Code
 
-### Install
+#### Install
 
 See [Install VS Code](install-vs-code.md) doc.
 
-### Extensions
+#### Extensions
 
-Install the backup extension.
+Sign in.
 
-Then load the gist to get all extensions and configs.
+Turn on syncing of extensions and other settings. 
+
+### PyCharm
+
+#### Install
+
+[Download](https://www.jetbrains.com/pycharm/download/) page.

@@ -2,6 +2,8 @@
 
 Notes (mainly for myself) on reliably setting up a new laptop or fresh OS install using my preferred order of steps and software.
 
+This guide is for **Linux**.
+
 
 ## Basic
 
@@ -30,7 +32,6 @@ Once logged in, set these up:
 		%michael ALL=(ALL) NOPASSWD:ALL
 		```
 
-
 ## Install
 
 ### Setup browser
@@ -43,9 +44,11 @@ Once logged in, set these up:
 
 ### Install packages
 
-Follow instructions in [README.md](https:/github.com/michaelcurrin/os-genesis#readme) to run the `install.sh` script. Be sure to keep that up to date as new packages are installed.
+Follow instructions in [README.md](https:/github.com/michaelcurrin/os-genesis#readme) to run the `install.sh` script. 
 
-See also on Linux Lite - Software installer GUI (a few packages) or package manager (many packages) or `apt`
+Be sure to keep that up to date as new packages are installed i.e. Run `git pull` and rerun the script.
+
+See also on _Linux Lite - Software installer_ GUI (a few packages) or package manager (many packages) or `apt`.
 
 These are from the Software installer GUI and some are covered in the `install.sh` script.
 
@@ -105,7 +108,9 @@ See [Install VS Code](install-vs-code.md) doc.
 
 Sign in.
 
-Turn on syncing of extensions and other settings. 
+Turn on syncing of extensions and other settings.
+
+For breakdown of extensions and what they do, see my [gist](https://gist.github.com/MichaelCurrin/e1f0b488d4ed8e6c24646e37c75fe2ea).
 
 ### PyCharm
 

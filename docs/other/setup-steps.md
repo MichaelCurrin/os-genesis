@@ -107,7 +107,7 @@ Then follow the README.
 Put off doing commits until that it setup so that git config has email and username.
 
 
-## Install IDEs
+## 5. Install IDEs
 
 ### Terminal
 

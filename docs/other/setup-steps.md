@@ -36,18 +36,19 @@ Once logged in, set these up:
 
 ### Setup browser
 
-- Setup Firefox settings
-- Install LastPass - [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/)
-- Setup Firefox sync
-	- Login using password in LastPass
-	- Remaining extensions will be installed using sync
+- Install Firefox if not installed already. 
+- Setup Firefox settings.
+- Install LastPass - [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/).
+- Setup Firefox sync.
+	- Login using password in LastPass.
+	- Remaining extensions will be installed using sync.
 
 ### Install packages
 
-Follow instructions in this OS Genesis project.
+Follow instructions in this OS Genesis project to install dev packages (like Python and Ruby) and shell tools.
 
 1. Follow [install](../installation.md) page.
-2. Follow the main [usage](../usage.md) page.
+2. Follow the main [usage](../usage.md) steps.
     ```sh
     $ ./gen configure
     $ ./gen install
@@ -57,7 +58,9 @@ Be sure to keep that up to date as new packages are installed i.e. Run `git pull
 
 See also on _Linux Lite - Software installer_ GUI (a few packages) or package manager (many packages) or `apt`.
 
-These are from the Software installer GUI and some are covered in the `install.sh` script.
+### Install additional packages
+
+These are from the Software installer GUI and some are covered in the `gen install` script already.
 
 - Etcher
 	- balena-etcher-electron/unknown 1.5.95 amd64
@@ -72,7 +75,7 @@ These are from the Software installer GUI and some are covered in the `install.s
 - Tor browser
 - Webcam Software
 
-### Start on boot
+### Setup start on boot commands
 
 To ensure software starts on startup (like `yakuake`), set these up under Settings. 
 

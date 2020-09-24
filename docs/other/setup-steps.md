@@ -44,7 +44,11 @@ Once logged in, set these up:
 
 ### Install packages
 
-Follow instructions in [README.md](https:/github.com/michaelcurrin/os-genesis#readme) to run the `install.sh` script. 
+Follow instructions in this OS Genesis project.
+
+1. Follow [install](../installation.md) page.
+2. Follow [usage](../usage.md) page.
+
 Be sure to keep that up to date as new packages are installed i.e. Run `git pull` and rerun the script.
 
 See also on _Linux Lite - Software installer_ GUI (a few packages) or package manager (many packages) or `apt`.

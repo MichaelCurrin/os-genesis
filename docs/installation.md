@@ -1,5 +1,6 @@
 # Installation
 
+
 ## Requirements
 
 - Built for:
@@ -18,7 +19,7 @@ Download an archive of latest master (not necessarily latest tag):
 
 [![Download zip](https://img.shields.io/badge/📦_Download-master.zip-green?style=for-the-badge)](https://github.com/MichaelCurrin/os-genesis/archive/master.zip) [![Download tarball](https://img.shields.io/badge/📦_Download-master.tar.gz-green?style=for-the-badge)](https://github.com/MichaelCurrin/os-genesis/archive/master.tar.gz)
 
-Open the archive to unzip it with a program (Linux usually comes with a GUI).
+Open the archive to unzip it with a program (Linux and macOS usually come with a tool installed so you right-click or double-click an archive to extract it).).
 
 Put the folder somewhere you can run it from. e.g. `~/repos`.
 

@@ -36,7 +36,7 @@ terraform
 graphicsmagick
 ```
 
-<!-- NVM? -->
+<!-- NVM? Curl? -->
 
 
 ## Install shell tools

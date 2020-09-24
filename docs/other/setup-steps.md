@@ -86,9 +86,9 @@ For Linux Lite, go to Sessions and Startup in the start menu.
 
 ### SSH
 
-Follow my cookbook page to setup SSH for Github.
+Follow my cookbook page to setup SSH on your machine from scratch and configure SSH access on your GitHub account:
 
-- [SSH - All GitHub Access](https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/all-github-access.md)
+- [SSH - All GitHub Access](https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/github-ssh-access.md)
 
 You'll need some IDE to set that up. 
 

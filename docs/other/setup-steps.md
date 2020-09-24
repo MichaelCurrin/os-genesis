@@ -47,7 +47,11 @@ Once logged in, set these up:
 Follow instructions in this OS Genesis project.
 
 1. Follow [install](../installation.md) page.
-2. Follow [usage](../usage.md) page.
+2. Follow the main [usage](../usage.md) page.
+    ```sh
+    $ ./gen configure
+    $ ./gen install
+    ```
 
 Be sure to keep that up to date as new packages are installed i.e. Run `git pull` and rerun the script.
 

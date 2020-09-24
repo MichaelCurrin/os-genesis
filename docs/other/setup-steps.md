@@ -5,26 +5,26 @@ Notes (mainly for myself) on reliably setting up a new laptop or fresh OS instal
 This guide is for **Linux**.
 
 
-## Basic
+## 1. Basic
 
-1. Write OS to DVD-R or flash drive
-1. Turn off machine
-1. Insert disc
-1. Boot up
+1. Write OS to DVD-R or flash drive.
+1. Plug it in another machine or leave it in the current one.
+1. Turn off the machine.
+1. Boot it up.
 1. Follow install steps. In particular:
-	1. Select to **encrypt** hard drive with a password
-	1. Choose **US** language
+	1. Select to **encrypt** hard drive with a password.
+	1. Choose **US** language.
 
 
-## System config
+## 2. System config
 
 Once logged in, set these up:
 
-- Connect to WiFi
+- Connect to WiFi.
 - Power manager under settings. 
 	- Turn on _notifications_ and _tray icon_.
 - Setup network
-	- Edit `/etc/hosts` and setup my machines. This can happen later when I need it.
+	- Edit `/etc/hosts` and setup the machines. This can happen later when I need it.
 - Optionally disable requiring password for `sudo` commands.
 	- Run `sudo visudo`.
 	- Set this.
@@ -32,7 +32,7 @@ Once logged in, set these up:
 		%michael ALL=(ALL) NOPASSWD:ALL
 		```
 
-## Install
+## 3. Install
 
 ### Setup browser
 
@@ -45,7 +45,6 @@ Once logged in, set these up:
 ### Install packages
 
 Follow instructions in [README.md](https:/github.com/michaelcurrin/os-genesis#readme) to run the `install.sh` script. 
-
 Be sure to keep that up to date as new packages are installed i.e. Run `git pull` and rerun the script.
 
 See also on _Linux Lite - Software installer_ GUI (a few packages) or package manager (many packages) or `apt`.
@@ -65,7 +64,6 @@ These are from the Software installer GUI and some are covered in the `install.s
 - Tor browser
 - Webcam Software
 
-
 ### Start on boot
 
 To ensure software starts on startup (like `yakuake`), set these up under Settings. 
@@ -73,7 +71,7 @@ To ensure software starts on startup (like `yakuake`), set these up under Settin
 For Linux Lite, go to Sessions and Startup in the start menu.
 
 
-## Configure
+## 4. Configure for development
 
 ### SSH
 
@@ -81,8 +79,9 @@ Follow my cookbook page to setup SSH for Github.
 
 - [SSH - All GitHub Access](https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/all-github-access.md)
 
+You'll need some IDE to set that up. 
 
-## Shell config setup
+### Shell config setup
 
 This is a **private** repo. It needs SSH credentials setup.
 
@@ -96,7 +95,12 @@ Then follow the README.
 
 Put off doing commits until that it setup so that git config has email and username.
 
-## IDE
+
+## Install IDEs
+
+### Terminal
+
+Make sure you have `vim` and `nano` installed.
 
 ### VS Code
 

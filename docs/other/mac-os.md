@@ -7,10 +7,15 @@ This repo is focused on Linux, but here are some macOS **Homebrew** packages to 
 
 Use Bash to install Homebrew - see [brew.sh](https://brew.sh/) homepage.
 
+
+## Install Brew packages
+
+Firefox is available as a [cask](https://formulae.brew.sh/cask/firefox) in Brew.
+
 Follow sections below to install more packages. Run `brew install PACKAGE` for any of the packages in this doc.
 
 
-## Install dev packages
+### Install dev packages
 
 ```
 git
@@ -44,7 +49,7 @@ graphicsmagick
 <!-- NVM? Curl? -->
 
 
-## Install shell tools
+### Install shell tools
 
 ```
 findutils
@@ -68,16 +73,14 @@ $ brew rm coreutils && brew install coreutils
 $ gdate
 ```
 
-
-## Install libs
+### Install libs
 
 ```
 openssl
 openssl@1.1
 ```
 
-
-## Dump
+### Brew dump
 
 Here is a dump of everything in Aug 2020 as a reference.
 

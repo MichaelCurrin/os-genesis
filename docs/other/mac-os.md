@@ -28,6 +28,7 @@ sphinx-doc
 
 node
 yarn # will include node
+nvm
 
 ruby
 r
@@ -42,11 +43,22 @@ mongodb
 sqlite
 
 terraform
+```
 
+
+### Images
+
+See also [gist](https://gist.github.com/MichaelCurrin/32b88b2c70c59832c922bcf03bdc08c3) instuctions.
+
+```
 graphicsmagick
 ```
 
-<!-- NVM? Curl? -->
+[ImageMagick formula](https://formulae.brew.sh/formula/imagemagick)
+
+```
+imagemagick
+```
 
 
 ### Install shell tools
@@ -60,11 +72,17 @@ gcc
 wget
 ```
 
+Curl wasn't in my [Brew dump](#brew-dump) even though it's installed but you can use `curl` as a the package name I think.
+
+#### readline
+
 If you have problems in interactive shells with pressing arrow keys but getting escape characters, then try a solution from [here](https://stackoverflow.com/questions/893053/seeing-escape-characters-when-pressing-the-arrow-keys-in-python-shell).
 
 ```sh
 readline
 ```
+
+#### date
 
 For access to `gdate` from GNU Linux, based on research.
 
@@ -72,6 +90,21 @@ For access to `gdate` from GNU Linux, based on research.
 $ brew rm coreutils && brew install coreutils
 $ gdate
 ```
+
+#### sed
+
+GNU / Linux sed.
+
+```
+gnu-sed
+```
+
+Then add to `.bashrc` or `.zshrc`.
+
+```sh
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+```
+
 
 ### Install libs
 

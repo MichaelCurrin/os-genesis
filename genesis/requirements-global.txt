@@ -13,7 +13,7 @@ pylint
 
 # IPython
 ipython
-ipykernel # For Jupyter Notebooks in VS Code.
+ipykernel  # For Jupyter Notebooks in VS Code.
 
 # Other
 mkdocs

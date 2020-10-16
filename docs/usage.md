@@ -106,6 +106,26 @@ Install or upgrade global Python packages.
 $ gen py-packages
 ```
 
+#### Note on Python package locations
+
+On Unix-based systems, these install the current PY3 version's site packages  such as here: ` /usr/local/lib/python3.9/site-packages`
+
+To make those executable, there are short entry points stored in `/usr/local/bin`.
+
+Example:
+
+- `/usr/local/bin/black`
+    ```python
+    #!/usr/local/opt/python/bin/python3.7
+    # -*- coding: utf-8 -*-
+    import re
+    import sys
+    from black import patched_main
+    if __name__ == '__main__':
+        sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+        sys.exit(patched_main())
+    ```
+
 ### Update package versions
 
 Add a cron task to run certain project scripts to ensure the system's packages and configuration matches what is in the latest GitHub release.

@@ -115,30 +115,32 @@ openssl@1.1
 
 ### Brew dump
 
-Here is a dump of everything in Aug 2020 as a reference.
+Here is a dump of everything in Oct 2020 as a reference.
 
 ```sh
 $ brew list
 ```
 ```
-autoconf                icu4c                   little-cms2             python
-coreutils               ipython                 mongodb                 r
+autoconf                httpie                  libxmlsec1              pyenv-virtualenv
+bdw-gc                  hugo                    libyaml                 python@3.8
+coreutils               icu4c                   little-cms2             python@3.9
+cython                  ipython                 mongodb                 r
 dnsmasq                 isl                     mpfr                    readline
-elixir                  jasper                  mysql                   ruby
-erlang                  jpeg                    mysql-client            shfmt
-findutils               kubernetes-cli          mysql-connector-c       snappy
-freetype                leveldb                 mysql-connector-c++     sphinx-doc
-gcc                     libffi                  ncurses                 sqlite
-gdbm                    libgcrypt               nettle                  swig
-gettext                 libgpg-error            node                    terraform
-git                     libidn2                 openblas                tree
-gmp                     libmpc                  openssl                 webp
-gnutls                  libpng                  openssl@1.1             wget
-gotty                   libtasn1                p11-kit                 wxmac
-gperftools              libtiff                 pcre                    xz
-graphicsmagick          libtool                 pcre2                   yarn
-groovy                  libunistring            pkg-config              zeromq
-htop                    libxml2                 postgresql
-httpie                  libxmlsec1              pyenv
-hugo                    libyaml                 pyenv-virtualenv
+dyld-headers            jasper                  mysql                   ruby
+elixir                  jpeg                    mysql-client            shfmt
+erlang                  krb5                    mysql-connector-c       snappy
+findutils               kubernetes-cli          mysql-connector-c++     sphinx-doc
+freetype                leveldb                 ncurses                 sqlite
+gcc                     libevent                nettle                  swig
+gdbm                    libffi                  node                    terraform
+gettext                 libgcrypt               openblas                tree
+git                     libgpg-error            openjdk                 unbound
+gmp                     libidn2                 openssl@1.1             webp
+gnutls                  libmpc                  p11-kit                 wget
+gotty                   libpng                  pcre                    wxmac
+gperftools              libtasn1                pcre2                   xz
+graphicsmagick          libtiff                 pkg-config              yarn
+groovy                  libtool                 postgresql              zeromq
+guile                   libunistring            protobuf
+htop                    libxml2                 pyenv
 ```

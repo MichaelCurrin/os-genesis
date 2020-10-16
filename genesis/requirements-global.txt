@@ -1,7 +1,8 @@
 # Core package installation
-pip
+easy_install
+pip  # see installed as pip3
 setuptools
-wheel
+wheel  # This avoids falling back to legacy option. See installed as wheel3.
 
 # Formatting and linting tools
 # These help VS Code when there is no virtual environment.

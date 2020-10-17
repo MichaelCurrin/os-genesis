@@ -30,7 +30,9 @@ install \
   htop \
   nano \
   make \
-  thunderbird
+  thunderbird \ 
+  sqlite3 \
+  libsqlite3-dev
 
 echo
 echo 'DEV TOOLS'

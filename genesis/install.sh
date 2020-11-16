@@ -30,7 +30,7 @@ install \
   htop \
   nano \
   make \
-  thunderbird \ 
+  thunderbird \
   sqlite3 \
   libsqlite3-dev
 
@@ -46,7 +46,6 @@ install \
 echo
 echo 'PRODUCTIVITY TOOLS'
 install \
-  mailutils \ # You'll get prompted for configuration on first install.
   dropbox \
   redshift # Add warm screen tint.
 

@@ -46,6 +46,7 @@ install \
 echo
 echo 'PRODUCTIVITY TOOLS'
 install \
+  mailutils \ # You'll get prompted for configuration on first install.
   dropbox \
   redshift # Add warm screen tint.
 
@@ -54,7 +55,7 @@ install \
 echo
 echo 'BROWSER'
 install firefox
-# Driver for web scraping or automated testing.
+# Driver for web scraping or automated testing. Currently not used by me.
 # install firefox-geckodriver
 
 ###
@@ -80,10 +81,10 @@ install \
   ruby-dev \
   ruby-full
 
-# Make sure to install bundler as user-level and not using apt as you'll be root and you won't install gems in the user level).
+# Make sure to install bundler at the user-level and not using apt (as you'd be root and you won't install gems in the user level).
 if ! command -v bundler /dev/null 2>&1; then
   gem install bundler --user-install
-  # Expect warning: ~/.gem/ruby/2.7.0/bin must be in PATH.
+  # Expected warning: ~/.gem/ruby/2.7.0/bin must be in PATH.
 fi
 
 ###

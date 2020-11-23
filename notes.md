@@ -1,5 +1,7 @@
 # Notes
 
+Notes for myself while developing. These don't belong in the docs site.
+
 ## NPM
 
 ### Configured package directory
@@ -22,6 +24,8 @@ Now this works without sudo - `/usr/local/lib/npm/lib/node_modules`. So far I ha
 An alternative is to configure a different NPM directory that is in a home directory. This would affect all users though as you use `-g`, so make sure there aren't other users on your machine.
 
 https://www.gurustop.net/blog/2015/01/12/sudo-npm-install-g-global-mac-ubuntu-linux-windows
+
+https://docs.npmjs.com/cli/v6/configuring-npm/folders/
 
 Note that `~/.npm` already exists for something else.
 

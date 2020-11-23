@@ -1,5 +1,8 @@
 root = true
 
-[*.sh]
+[*]
 indent_style = space
+indent_size = 4
+
+[*.{sh,yml}]
 indent_size = 2

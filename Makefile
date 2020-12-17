@@ -11,6 +11,7 @@ i install:
 
 
 u upgrade:
+	# TODO split apt updates into separate script and choose full or not.
 	genesis/upgrade.sh
 	# genesis/upgrade-full.sh
 

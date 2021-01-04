@@ -3,10 +3,12 @@
 
 ## Requirements
 
-- Built for:
+- Made for:
     - Linux (Debian / Ubuntu)
 - Uses: [APT](https://wiki.debian.org/Apt)
     - Standard for managing Debian/Ubuntu systems. The command use here is `apt` which a successor to `apt-get`. Both should be installed and commands are generally the same in both. Read differences [here](https://www.linux-magazine.com/Issues/2018/208/apt-vs.-apt-get)
+- Downloads from:
+    - [Ubuntu packages registry](https://packages.ubuntu.com/)
 
 There are no other system dependencies - you don't even need `git`.
 
@@ -22,7 +24,6 @@ Download an archive of latest master (not necessarily latest tag):
 Open the archive to unzip it with a program (Linux and macOS usually come with a tool installed so you right-click or double-click an archive to extract it).).
 
 Put the folder somewhere you can run it from. e.g. `~/repos`.
-
 
 ### Clone
 

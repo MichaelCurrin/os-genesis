@@ -78,7 +78,7 @@ echo 'RUBY'
 # Includes dev headers.
 install ruby-full
 
-# Make sure to install bundler at the user-level and not using apt (as you'd be root and you won't install gems in the user level).
+# Make sure to install bundler at the user level and not using apt (as you'd be root and you won't install gems in the user level).
 if ! command -v bundler /dev/null 2>&1; then
   gem install bundler --user-install
   # Expected warning: ~/.gem/ruby/2.7.0/bin must be in PATH.

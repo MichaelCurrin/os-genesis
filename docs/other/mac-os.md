@@ -14,37 +14,56 @@ Firefox is available as a [cask](https://formulae.brew.sh/cask/firefox) in Brew.
 
 Follow sections below to install more packages. Run `brew install PACKAGE` for any of the packages in this doc.
 
+See also my [Gist Viewer](https://michaelcurrin.github.io/gist-viewer/) collection, as it covers how to install some of these on macOS and Linux.
 
-### Install dev packages
+### Install packages for developing
 
 ```
 git
+```
 
+```
+# Python
 python
 ipython
 pyenv
 pyenv-virtualenv
 sphinx-doc
+```
 
+```
+# JS
 node
 yarn # will include node
 nvm
-
+```
+```
+# Ruby
 ruby
 r
 groovy
 elixir
 erlang
+```
 
+Get a specific Ruby:
+
+```sh
+$ brew install ruby@2.7
+```
+
+```
+go
 hugo
-
+```
+```
 postgresql
 mongodb
 sqlite
-
+```
+```
 terraform
 ```
-
 
 ### Images
 
@@ -59,7 +78,6 @@ graphicsmagick
 ```
 imagemagick
 ```
-
 
 ### Install shell tools
 
@@ -78,7 +96,7 @@ Curl wasn't in my [Brew dump](#brew-dump) even though it's installed but you can
 
 If you have problems in interactive shells with pressing arrow keys but getting escape characters, then try a solution from [here](https://stackoverflow.com/questions/893053/seeing-escape-characters-when-pressing-the-arrow-keys-in-python-shell).
 
-```sh
+```
 readline
 ```
 
@@ -105,7 +123,6 @@ Then add to `.bashrc` or `.zshrc`.
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 ```
 
-
 ### Install libs
 
 ```
@@ -113,7 +130,7 @@ openssl
 openssl@1.1
 ```
 
-### Brew dump
+### Brew packages dump
 
 Here is a dump of everything in Oct 2020 as a reference.
 
@@ -144,3 +161,12 @@ groovy                  libtool                 postgresql              zeromq
 guile                   libunistring            protobuf
 htop                    libxml2                 pyenv
 ```
+
+
+## Install manually
+
+Install Rust using instructions on Rust's [Install](https://www.rust-lang.org/tools/install) page.
+
+You'll use `rustup` to manage your Rust versions after that.
+
+Same with Go. If you don't want to install with Brew, you can follow this instructions - [Install Go manually](https://gist.github.com/MichaelCurrin/5e2bafa7aa4895e56aeb489c91d314d4). Then update or add Go versions to using the Go CLI.

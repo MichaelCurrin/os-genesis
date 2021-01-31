@@ -165,8 +165,14 @@ htop                    libxml2                 pyenv
 
 ## Install manually
 
+### Rust
+
 Install Rust using instructions on Rust's [Install](https://www.rust-lang.org/tools/install) page.
 
 You'll use `rustup` to manage your Rust versions after that.
+
+See also my [Rust](https://github.com/MichaelCurrin/learn-to-code/blob/master/en/topics/scripting_languages/Rust/README.md) Learn to Code guide.
+
+### Go
 
 Same with Go. If you don't want to install with Brew, you can follow this instructions - [Install Go manually](https://gist.github.com/MichaelCurrin/5e2bafa7aa4895e56aeb489c91d314d4). Then update or add Go versions to using the Go CLI.

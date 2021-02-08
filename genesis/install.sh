@@ -75,7 +75,7 @@ install \
 
 echo
 echo 'RUBY'
-# Includes dev headers.
+# Includes ruby, ruby-dev (dev headers) and ri (supports viewing Ruby docs).
 install ruby-full
 
 # Make sure to install bundler at the user level and not using apt (as you'd be root and you won't install gems in the user level).

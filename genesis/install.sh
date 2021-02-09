@@ -61,10 +61,12 @@ install firefox
 
 echo
 echo 'PYTHON'
-# -dev - include C headers for compiling extensions - needed for lxml.
-# -pip - this somehow got removed from my machine so I added it back.
-# -venv - Although venv module is now standard, this package is needed to install ensurepip
-#         otherwise you get an error running python -m venv
+# Notes:
+# -dev  - Includes C headers for compiling extensions - needed for lxml.
+# -pip  - This somehow got removed from my machine so I added it back. If you don't install packages globally,
+#         you actually don't need the `pip` command. You can always access it in a virtual environment.
+# -venv - Although the venv module is now standard, this AP package is needed to install `ensurepip`
+#         otherwise you get an error when running `python -m venv PATH`.
 install \
   python3 \
   python3-dev \
@@ -81,7 +83,7 @@ install ruby-full
 # Make sure to install bundler at the user level and not using apt (as you'd be root and you won't install gems in the user level).
 if ! command -v bundler /dev/null 2>&1; then
   gem install bundler --user-install
-  # Expected warning: ~/.gem/ruby/2.7.0/bin must be in PATH.
+  # Expect output warning: `~/.gem/ruby/2.7.0/bin must be in PATH`.
 fi
 
 ###
@@ -93,16 +95,16 @@ echo 'NODE / NPM'
 if command -v node >/dev/null 2>&1; then
   node -v
   npm -v
-  echo 'Use gen or apt to upgrade it. Update nodesource to get newer than 14.x'
+  echo 'Use gen or apt to upgrade it. Update the nodesource version in the scrip to get newer than 14.x'
 else
   echo 'Adding Node to deb sources and installing'
-  # Setup Debian repo for Node.js
+  # Setup Debian source for Node.js
   #
-  # Copied from:
+  # Copied from Node's guides:
   #     https://nodejs.org/en/download/package-manager/
   #     https://github.com/nodesource/distributions/blob/master/README.md
   #
-  # Note this requires root access, unlike Brew. If you use NVM though you don't need root access.
+  # Note that this requires root access. Unlike if you use Brew or install NVM instead.
   curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 fi
 
@@ -123,11 +125,11 @@ install nodejs
 echo
 echo 'YARN'
 
-# Assume Node was installed in previous section.
-
 # See also https://gist.github.com/MichaelCurrin/bdc34c554fa3023ee81449eb77375fcb
 
-npm install -g yarn
+if command -v node >/dev/null 2>&1; then
+  npm install -g yarn
+fi
 
 ###
 

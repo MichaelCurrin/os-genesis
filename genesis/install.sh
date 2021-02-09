@@ -147,16 +147,16 @@ fi
 
 ###
 
-# echo 'RUST'
+echo 'RUST'
 
-# if command -v 'rustc -V' /dev/null 2>&1; then
-#   echo 'Rust is already installed'
-#   rustc -V
-# else
-#   # This works on macOS and Linux.
-#   curl https://sh.rustup.rs -sSf | sh
-#   # Alternatively use the rust-src APT package.
-# fi
+if command -v rustc /dev/null 2>&1; then
+  echo 'Rust is already installed'
+  rustc -V
+else
+  # For macOS and Linux.
+  curl https://sh.rustup.rs -sSf | sh
+  # Alternatively, use the rust-src APT package.
+fi
 # Expect this to be in PATH:
 #   ~/.cargo/bin
 

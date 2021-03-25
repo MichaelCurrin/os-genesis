@@ -42,22 +42,22 @@ if command -c bundler >/dev/null 2>&1; then
 fi
 
 echo
+echo 'YARN'
+
+if command -v yarn >/dev/null 2>&1; then
+  npm upgrade -g yarn
+fi
+
+echo
 echo 'DENO'
 
 if command -v deno >/dev/null 2>&1; then
   deno upgrade
 fi
 
-# echo
-# echo 'RUST'
+echo
+echo 'RUST'
 
 if command -v rustc /dev/null 2>&1; then
   rustup update
-fi
-
-echo
-echo 'YARN'
-
-if command -v yarn >/dev/null 2>&1; then
-  npm upgrade -g yarn
 fi

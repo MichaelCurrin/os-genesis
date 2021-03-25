@@ -42,6 +42,13 @@ if command -c bundler >/dev/null 2>&1; then
 fi
 
 echo
+echo 'NPM'
+
+if command -v npm >/dev/null 2>&1; then
+  npm upgrade -g npm
+fi
+
+echo
 echo 'YARN'
 
 if command -v yarn >/dev/null 2>&1; then

@@ -51,8 +51,9 @@ fi
 # echo
 # echo 'RUST'
 
-# TODO
-# rustup update
+if command -v rustc /dev/null 2>&1; then
+  rustup update
+fi
 
 echo
 echo 'YARN'

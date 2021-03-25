@@ -34,6 +34,9 @@ sudo gem update --system
 #     openssl ostruct power_assert pstore psych racc rake rdoc readline-ext reline singleton stringio
 #     strscan test-unit timeout tracer uri xmlrpc yaml
 # I don't depend on use them directly so it maybe doesn't matter to update them as regularly.
+#
+# Native extensions get built, requiring readline.h and ssl.h which were missing, therefore
+# had to install `libreadline-dev` and `libssl-dev` with APT.
 #sudo gem update
 
 # User gems.

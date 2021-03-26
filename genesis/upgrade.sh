@@ -48,7 +48,9 @@ echo
 echo 'NPM'
 
 if command -v npm >/dev/null 2>&1; then
-  npm upgrade -g npm
+  # Warning: I needed NPM v6 on both mac and Linux machines, because of lockfiles for work that needs v6.
+  npm install -g npm@6
+  #npm upgrade -g npm
 fi
 
 echo

@@ -33,9 +33,13 @@ Install APT packages - [install.sh](/genesis/install.sh)
 $ ./gen install
 ```
 
-Note - this project will _not_ uninstall packages if they are removed from the install script, so you'll need to manually clean-up with `sudo apt remove PACKAGE` after packages are removed.
+That install command should only need to be once and then followed by the upgrade command later.
 
-Install optional packages - [optional.sh](/genesis/install-optional.sh)
+Run the install command again if you make additions to this repo and want to get those installed on a machine.
+
+Note - this project will _not_ uninstall APT packages if they are removed from the install script, so you'll need to manually clean-up with `sudo apt-get remove PACKAGE` after packages are removed.
+
+Install optional supporting packages - [optional.sh](/genesis/install-optional.sh)
 
 ```sh
 $ ./gen install-optional
@@ -43,14 +47,25 @@ $ ./gen install-optional
 
 These are intended for a fresh install but they can be run repeatedly if needed, such as if this scripts are updated or something that was uninstalled manually needs to be installed again.
 
+To upgrade To get the latest versions, run this:
+
+```sh
+$ ./gen upgrade
+```
+
+Or this:
+
+```sh
+$ gen upgrade-full
+```
+
+
 ## Checks
 
 Run these at any time as they only read data.
 
-Update _all_ APT packages.
-
 ```sh
-$ ./gen upgrade
+$ ./gen upgrade-list
 ```
 
 Clear space in the APT cache and auto-remove unneeded packages.
@@ -82,31 +97,20 @@ Tasks to add to your to `cron.daily` directory or your `crontab` file.
 
 Either add `gen` to your bin executables directory, or use the full path to the executable.
 
-### Manage packages
-
-Add a cron task to ensure that installed packages are updated on schedule without your interaction needed - note there is a risk of things breaking.
-
-If your system gives a pop-up prompt to update packages, you may prefer to use that.
-
-<!-- TODO: git pull, or checkout latest tag, both as options, ideally through gen CLI -->
+Upgrade packages.
 
 ```sh
-$ gen install
+$ gen upgrade
 ```
 
-Optionally run this too:
-
-```sh
-$ gen install-optional
-```
-
-Install or upgrade global Python packages.
+Upgrade global Python packages.
 
 ```sh
 $ gen py-packages
 ```
 
-#### Note on Python package locations
+
+## Note on Python package locations
 
 On Unix-based systems, these install the current PY3 version's site packages  such as here: ` /usr/local/lib/python3.9/site-packages`
 
@@ -125,17 +129,3 @@ Example:
         sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
         sys.exit(patched_main())
     ```
-
-### Update package versions
-
-Add a cron task to run certain project scripts to ensure the system's packages and configuration matches what is in the latest GitHub release.
-
-```sh
-$ gen upgrade
-```
-
-Or this.
-
-```sh
-$ gen upgrade-full
-```

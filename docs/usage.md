@@ -7,19 +7,31 @@ $ make help
 ```
 
 ## Manage packages
-> Commands which change the state of the system and packages
 
-The install command should only need to be once and then followed by the upgrade command later.
+When setting up a new system, run the install command.
 
 ```sh
 $ make install
 ```
 
+Later, run the upgrade command.
+
 ```sh
 $ make upgrade
 ```
 
-These are intended for a fresh install on a system, but they can both be run repeatedly if needed, such as if this scripts are changed, or something that was uninstalled manually needs to be installed again.
+You can run the install command repeatedly safely, but it might keep you at the current version. While the upgrade command forces upgrading to the latest.
+
+It is useful to run the install command whenever there are changes to this repo, such as adding a new package to be installed. Or if packages were uninstalled manually or accidentally and you want to return to the state indicated by this repo.
+
+### APT vs not APT
+
+Note that while Rust and Go which could be setup with APT rather than by a manual install with `curl`, I prefer the manual approach. It's more verbose initially but easy to manage later. Plus this project manages the `curl` commands so you don't have to it.
+
+With APT, it gets confusing when you use the tool's CLI to upgrade to a newer version but APT still thinks it has an older version. Also, APT's repositories will not be as up to date.
+
+I discuss this further in a [blog post here](https://michaelcurrin.github.io/coding-blog/2020/08/25/package-manager-choice.html).
+
 
 ### Automation
 

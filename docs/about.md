@@ -1,5 +1,7 @@
 # About
 
+<!-- TODO clean up as this is verbose and duplicates. -->
+
 
 ## Intro
 
@@ -8,6 +10,17 @@ This project makes it easy to manage installed packages and configurations throu
 The point of this produce is to make management of dev packages and other software visible and explicit in a central place (rather than in memory or scattered across notes) and to make it easy to manage the current machine and setup a new machine.
 
 Hopefully others can use this project as a starting point and make a fork to customize their environment.
+
+
+## Why use this project
+
+A shell-based tool to automate management of system packages on a Linux machine - the shell scripts in this repo act as a central configuration of packages to install and update. If your machine breaks down or you get a new one - no worries, your dev environment can be rebuilt using this repo.
+
+This can bootstrap a fresh Linux installation to make it ready for development and then after that also be used maintain the packages and package configuration.
+
+This project aims to make this fast, easily, reproducible and visible in version control (so there is a history of what package names and config values you used that can be read on GitHub).
+
+This is for my own use, but others can use this project, a fork of it or just use this as reference on how to install/update packages.
 
 
 ## Purpose
@@ -19,9 +32,9 @@ If you're just here to see what APT packages I install using a Bash script, see 
 
 This project focused on _packages_ - it does not support "dotfiles" as I have separate project for that.
 
-Going with the DevOps/Ansible lingo, this project handles environment _orchestration_ (though in this case just a single host machine). 
+Going with the DevOps/Ansible lingo, this project handles environment _orchestration_ (though in this case just a single host machine).
 
-The project specifies the state of packages to be installed and configured and running the scripts makes it happen. This saves time having to research or rememeber the commands and run them.
+The project specifies the state of packages to be installed and configured and running the scripts makes it happen. This saves time having to research or remember the commands and run them.
 
 Further, this project works well with a layer of automation, as covered in a later section the [Schedule tasks](usage.md#schedule-tasks) part of the usage doc.
 
@@ -31,6 +44,6 @@ Further, this project works well with a layer of automation, as covered in a lat
 - Make it easy to setup and maintain a Linux dev environment.
 - Start from scratch such as a new laptop or a fresh of an OS.
 - Reproducible and consistent setup which is managed in the cloud (as a Github repo).
-- Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or simiar.
-- Run manually or on a cron job to ensure packages are up to date. 
+- Intended for a Linux machine - running on Ubuntu, Debian, Linux Lite or similar.
+- Run manually or on a cron job to ensure packages are up to date.
 - Keep multiple machines in sync by updating the repo on Github.

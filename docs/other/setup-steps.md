@@ -12,8 +12,8 @@ This guide is for **Linux**. See also my [macOS Reference](mac-os.md) page.
 1. Turn off the machine.
 1. Boot it up.
 1. Follow install steps. In particular:
-	1. Select to **encrypt** hard drive with a password.
-	1. Choose **US** language.
+    1. Select to **encrypt** hard drive with a password.
+    1. Choose **US** language.
 
 
 ## 2. System config
@@ -21,16 +21,16 @@ This guide is for **Linux**. See also my [macOS Reference](mac-os.md) page.
 Once logged in, set these up:
 
 - Connect to WiFi.
-- Power manager under settings. 
-	- Turn on _notifications_ and _tray icon_.
+- Power manager under settings.
+    - Turn on _notifications_ and _tray icon_.
 - Setup network
-	- Edit `/etc/hosts` and setup the machines. This can happen later when I need it.
+    - Edit `/etc/hosts` and setup the machines. This can happen later when I need it.
 - Optionally disable requiring password for `sudo` commands.
-	- Run `sudo visudo`.
-	- Set this.
-		```
-		%michael ALL=(ALL) NOPASSWD:ALL
-		```
+    - Run `sudo visudo`.
+    - Set this.
+        ```
+        %michael ALL=(ALL) NOPASSWD:ALL
+        ```
 
 ## 3. Install
 
@@ -40,8 +40,8 @@ Once logged in, set these up:
 - Setup Firefox settings.
 - Install LastPass - [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/).
 - Setup Firefox sync.
-	- Login using password in LastPass.
-	- Remaining extensions will be installed using sync.
+    - Login using password in LastPass.
+    - Remaining extensions will be installed using sync.
 
 ### Install packages
 
@@ -50,8 +50,7 @@ Follow instructions in this OS Genesis project to install dev packages (like Pyt
 1. Follow [install](../installation.md) page.
 2. Follow the main [usage](../usage.md) steps.
     ```sh
-    $ ./gen configure
-    $ ./gen install
+    $ make install
     ```
 
 Be sure to keep that up to date as new packages are installed i.e. Run `git pull` and rerun the script.
@@ -63,8 +62,8 @@ See also on _Linux Lite - Software installer_ GUI (a few packages) or package ma
 These are from the Software installer GUI and some are covered in the `gen install` script already.
 
 - Etcher
-	- balena-etcher-electron/unknown 1.5.95 amd64
-	- > balenaEtcher is a powerful OS image flasher built with web technologies to ensure flashing an SDCard or USB drive is a pleasant and safe experience. It protects you from accidentally writing to your hard-drives, ensures every byte of data was written correctly and much more.
+    - `balena-etcher-electron/unknown 1.5.95 amd64`
+    - > balenaEtcher is a powerful OS image flasher built with web technologies to ensure flashing an SDCard or USB drive is a pleasant and safe experience. It protects you from accidentally writing to your hard-drives, ensures every byte of data was written correctly and much more.
 - Dropbox
 - Filezilla
 - Music player
@@ -77,7 +76,7 @@ These are from the Software installer GUI and some are covered in the `gen insta
 
 ### Setup start on boot commands
 
-To ensure software starts on startup (like `yakuake`), set these up under Settings. 
+To ensure software starts on startup (like `yakuake`), set these up under Settings.
 
 For Linux Lite, go to Sessions and Startup in the start menu.
 
@@ -94,7 +93,7 @@ You'll need some IDE to set that up. Like `nano` or `vim`.
 
 ### Shell config setup
 
-This is a **private** repo. It needs SSH credentials setup.
+This is my **private** repo.
 
 ```sh
 $ mkdir -p repos

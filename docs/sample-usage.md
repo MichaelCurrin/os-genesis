@@ -9,16 +9,15 @@ Then run the `gen` script with options, either manually or on schedule to keep y
 
 ## Install packages
 
-Use APT to install packages like Python and Ruby.
+Install Python 3, Ruby, Rust, Go, Deno, Node and more.
 
 ```sh
-$ ./gen install
+$ make install
 ```
 
-This also covers packages like NodeJS, Rust and Go which can be setup with APT, or with a manual install (using `curl URL | sh`).
 
 ## Update packages
 
 ```sh
-$ ./gen upgrade
+$ make upgrade
 ```

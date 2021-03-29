@@ -5,7 +5,7 @@ root = true
 indent_style = space
 indent_size = 2
 
-[docs/*]
+[*.{md,html,svg}]
 indent_size = 4
 
 [Makefile]

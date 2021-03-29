@@ -59,7 +59,7 @@ See also on _Linux Lite - Software installer_ GUI (a few packages) or package ma
 
 ### Install additional packages
 
-These are from the Software installer GUI and some are covered in the `gen install` script already.
+These are from the Software installer GUI and some are covered in the `make install` command already.
 
 - Etcher
     - `balena-etcher-electron/unknown 1.5.95 amd64`
@@ -118,7 +118,7 @@ Make sure you have `vim` and `nano` installed.
 
 See [Install VS Code](install-vs-code.md) doc.
 
-If you ran the `gen install` command then you'll have VS Code setup already.
+If you ran the `make install` command then you'll have VS Code setup already.
 
 #### Extensions
 

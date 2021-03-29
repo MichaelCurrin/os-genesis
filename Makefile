@@ -18,6 +18,13 @@ u upgrade:
 c clean:
 	genesis/clean.sh
 
-# Dynamic match?
-# gen-%:
-# 	echo $0
+
+list-i:
+	genesis/install-list.sh
+
+list-u:
+	genesis/upgrade-list.sh
+
+
+py:
+	genesis/py-packages.sh

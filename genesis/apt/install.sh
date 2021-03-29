@@ -88,11 +88,13 @@ fi
 echo
 echo 'NODE / NPM'
 
+NODE_VERSION=14
+
 # See https://gist.github.com/MichaelCurrin/aa1fc56419a355972b96bce23f3bccba
 if command -v node >/dev/null 2>&1; then
   node -v
   npm -v
-  echo 'Use gen or apt to upgrade it. Update the nodesource version in the scrip to get newer than 14.x'
+  echo "Use $(make upgrade). To get newer than $NODE_VERSION, update the configured version in the script t"
 else
   echo 'Adding Node to deb sources and installing'
   # Setup Debian source for Node.js
@@ -102,7 +104,7 @@ else
   #     https://github.com/nodesource/distributions/blob/master/README.md
   #
   # Note that this requires root access. Unlike if you use Brew or install NVM instead.
-  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+  curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
 fi
 
 # Output from above:

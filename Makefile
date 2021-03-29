@@ -4,24 +4,61 @@ h help:
 	@grep '^[a-z]' Makefile
 
 
-i install:
-	genesis/install.sh
-	genesis/install-optional.sh
+.update-apt:
+	sudo apt update
+
+
+# Install
+
+install-apt: .update-apt
+	@echo 'Install packages managed by APT'
+	genesis/apt/install.sh
+	genesis/apt/install-optional.sh
 	genesis/config.sh
 
+install-other:
+	@echo 'Install other packages - not managed by APT'
+	genesis/other/install.sh
+
 py:
-	@echo 'Install and upgrade Python packages'
-	genesis/py-packages.sh
+	@echo 'Install / upgrade global Python packages'
+	PIP_REQUIRE_VIRTUALENV=false \
+		python3 -m pip install --upgrade -r genesis/other/requirements-global.txt
 
-u upgrade:
-	# TODO split apt updates into separate script and choose full or not.
+install: install-apt install-other py
+
+
+# Upgrade
+
+apt-upgrade: .update-apt
+	@echo 'APT packages'
+	sudo apt upgrade -y -q
+
+apt-upgrade-full: .update-apt
+	@echo 'Full APT upgrade'
+	# More aggressive. Performs the function of upgrade but will remove currently installed packages
+	# if this is needed to upgrade the system as a whole.
+	sudo apt full-upgrade -y
+
+pkg-upgrade:
+	@echo 'Upgrade language-specific global packages'
 	genesis/upgrade.sh
-	# genesis/upgrade-full.sh
 
+u upgrade: apt-upgrade pkg-upgrade
+
+
+# Clean
 
 c clean:
-	genesis/clean.sh
+	@echo 'Clean packages'
+	sudo apt autoremove -y
+	sudo apt clean
 
+
+# Informative.
+
+audit:
+	genesis/audit.sh
 
 list-apt:
 	@echo 'Installed APT packages'

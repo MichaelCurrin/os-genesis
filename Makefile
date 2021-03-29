@@ -10,11 +10,13 @@ h help:
 
 # Install
 
+config:
+	genesis/config.sh
+
 install-apt: .update-apt
 	@echo 'Install packages managed by APT'
 	genesis/apt/install.sh
 	genesis/apt/install-optional.sh
-	genesis/config.sh
 
 install-other:
 	@echo 'Install other packages - not managed by APT'
@@ -25,14 +27,18 @@ py:
 	PIP_REQUIRE_VIRTUALENV=false \
 		python3 -m pip install --upgrade -r genesis/other/requirements-global.txt
 
-install: install-apt install-other py
+install: config install-apt install-other py
 
 
 # Upgrade
 
 apt-upgrade: .update-apt
-	@echo 'APT packages'
+	@echo 'Upgrading APT packages'
 	sudo apt upgrade -y -q
+
+apt-upgrade-dry:
+	@echo 'Listing upgradeable APT packages'
+	sudo apt list --upgradeable
 
 apt-upgrade-full: .update-apt
 	@echo 'Full APT upgrade'
@@ -67,7 +73,3 @@ list-apt:
 list-py:
 	@echo 'Installed PY packages'
 	PIP_REQUIRE_VIRTUALENV=false python3 -m pip list
-
-list-upgrade:
-	@echo 'Upgradeable APT packages'
-	sudo apt list --upgradeable

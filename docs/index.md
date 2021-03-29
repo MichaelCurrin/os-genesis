@@ -1,4 +1,6 @@
-# Docs home
+# Home
+
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/os-genesis?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/os-genesis/releases/)
 
 [![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/)
 [![Made with Bash](https://img.shields.io/badge/Bash->%3D3-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)

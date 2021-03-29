@@ -2,6 +2,8 @@
 
 Navigate to the project root.
 
+TODO: Update this page to use [Makefile](/Makefile) instead.
+
 
 ## CLI
 

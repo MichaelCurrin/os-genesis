@@ -1,19 +1,15 @@
-# Homepage
+# Docs home
 
-[![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue.svg?logo=gnu-bash)](https://www.gnu.org/software/bash/)
-[![No dependencies](https://img.shields.io/badge/dependencies-0-blue.svg)](https://www.gnu.org/software/bash/)
-[![Made for Linux](https://img.shields.io/badge/Made_for-Linux-blue.svg?logo=linux)](https://www.linux.org/)
-
+[![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/)
+[![Made with Bash](https://img.shields.io/badge/Bash->%3D3-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
 <p align="center">
     <img src="logo.svg" height="150px">
 </p>
 
-The point of this project is to manage my infrastructure using code. I can list and change the packages installed on my Linux machines using commands here, including install Python and Node with APT.
+Orchestrate package management on a Linux dev machine with this shell-based tool. It handles installing, upgrading and listing packages managed both with and without APT. Including Dropbox, Firebox, Python, Ruby, Go, Rust, Deno and Node.
 
-This means I can setup a new machine easily, I can sync multiple Linux machines and I have my history in version control.
-
-I hope others can benefit from this project by picking out pieces they need to run manually, or they can adapt the commands for their own automated scripts.
+If you're just here to see what APT packages I install using Bash scripts, see [install.sh](https://github.com/MichaelCurrin/os-genesis/blob/master/genesis/apt/install.sh).
 
 
 ## Intro

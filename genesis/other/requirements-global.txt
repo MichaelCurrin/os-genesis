@@ -1,0 +1,20 @@
+pip         # Installed as pip3
+setuptools
+wheel       # This avoids falling back to legacy option. Installed as wheel3.
+
+# Formatting and linting tools
+# These help in VS Code when there is no virtual environment.
+autopep8
+black
+isort
+mypy
+pylint
+
+# IPython
+ipython
+ipykernel  # For Jupyter Notebooks in VS Code.
+
+# Other
+#mkdocs
+toml
+PyYAML

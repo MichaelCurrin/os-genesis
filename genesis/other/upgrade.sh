@@ -1,19 +1,6 @@
 #!/usr/bin/env bash
-# This automically accepts all upgrades.
-# In some cases you have to explicitly. I've seen this before - the first time was an error and no
-# prompt and on a subsequent run I got the y/N prompt. Therefore upgrade -y is not safe to run on a
-# cron job as it might block.
-
-echo 'Upgrade packages'
-echo
 
 set -e
-
-echo 'APT packages'
-
-sudo apt update
-
-sudo apt upgrade -y -q
 
 echo
 echo 'GEMS'

@@ -23,12 +23,12 @@ Here's the download thank you page / getting started page. It has resources but 
 ## Install with command-line
 
 - https://code.visualstudio.com/docs/setup/linux
- 
+
 
 Download `.deb` file
 
 ```sh
-$ cd ~/Downloads 
+$ cd ~/Downloads
 $ wget 'https://go.microsoft.com/fwlink/?LinkID=760868'
 $ ls
 ```
@@ -62,6 +62,10 @@ Note whenever you do a system update like this, VS Code will also be included.
 $ sudo apt upgrade
 ```
 
-Then `gen upgrade` command will perform that.
+Or within this Genesis project:
 
-Avoid running either upgrade command inside VS Code's terminal, otherwise this will quit VS Code before all updates are done.
+```sh
+$ make upgrade
+```
+
+Warning: Avoid running the upgrade command inside VS Code's own terminal. Otherwise that will quit VS Code before all updates are done.

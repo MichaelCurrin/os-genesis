@@ -9,7 +9,7 @@
     <img src="logo.svg" height="150px">
 </p>
 
-Orchestrate package management on a Linux dev machine with this shell-based tool. It handles installing, upgrading and listing packages managed both with and without APT. Including Dropbox, Firebox, Python, Ruby, Go, Rust, Deno and Node.
+Orchestrate package management on a Linux developer's machine with this shell-based tool. It handles installing, upgrading and listing packages managed - both with and without APT. Including Dropbox, Firebox, Python, Ruby, Go, Rust, Deno and Node.
 
 If you're just here to see what APT packages I install using Bash scripts, see [install.sh](https://github.com/MichaelCurrin/os-genesis/blob/master/genesis/apt/install.sh).
 

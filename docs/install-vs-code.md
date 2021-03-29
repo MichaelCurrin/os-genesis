@@ -3,9 +3,7 @@
 
 ## Install with GUI
 
-Go to:
-
-- https://code.visualstudio.com/Download
+Go to the [Download](https://code.visualstudio.com/Download) page of the VS Code docs. It has resources if you need info.
 
 Click the `.deb` button.
 
@@ -13,16 +11,12 @@ You'll be prompted to download the file of about 60MB.
 
 Run with the recommended Debian package installer.
 
-Click Install package.
-
-Here's the download thank you page / getting started page. It has resources but also prompts you to download each time.
-
-- https://code.visualstudio.com/Download#
+Click _Install package_.
 
 
 ## Install with command-line
 
-- https://code.visualstudio.com/docs/setup/linux
+- [Linux setup](https://code.visualstudio.com/docs/setup/linux) in VS Code docs.
 
 
 Download `.deb` file

@@ -1,13 +1,16 @@
 # OS Genesis 🌏 🧬 🏗 💻
-> Setup or manage a Linux dev environment predictably and easily
+> The easy and predictable way to setup and manage a Linux dev environment
 
-[![Made for Linux](https://img.shields.io/badge/Made_for-Linux-blue?logo=linux)](https://www.linux.org/)
-[![Made with Bash](https://img.shields.io/badge/Made_with-Bash-blue?logo=gnu-bash)](https://www.gnu.org/software/bash/)
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/os-genesis?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/os-genesis/releases/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+
+[![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/)
+[![Made with Bash](https://img.shields.io/badge/Bash->%3D3-blue?logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
 
 [![No dependencies](https://img.shields.io/badge/dependencies-0-blue)](https://www.gnu.org/software/bash/)
 
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/os-genesis)](https://github.com/MichaelCurrin/os-genesis/tags/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
+[![docs - jekyll](https://img.shields.io/badge/docs-jekyll-blue?logo=jekyll)](https://jekyllrb.com)
 
 
 <p align="center">
@@ -15,8 +18,6 @@
         <img src="/docs/logo.svg" height="150px">
     </a>
 </p>
-
-A package orchestration CLI tool which handles installing, upgrading and listing packages managed with and without APT.
 
 
 ## Documentation

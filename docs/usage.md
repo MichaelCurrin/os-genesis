@@ -1,64 +1,52 @@
 # Usage
 
-Navigate to the project root.
-
-TODO: Update this page to use [Makefile](/Makefile) instead.
-
-
-## CLI
-
-Run the `gen` script, which runs scripts in the [genesis](/genesis) directory.
+Commands are defined in [Makefile](/Makefile). See that file for more detailed commands or run:
 
 ```sh
-$ ./gen --help
+$ make help
 ```
 
-Usage and available commands will be shown.
-
-TODO: If added to `~/bin` or similar, this can be run from anywhere. - This is not ready yet as the script needs to know its own path to execute from.
-
-
-### Configure, install and update
+## Manage packages
 > Commands which change the state of the system and packages
 
-Follow the steps below in order. Note - no `.sh` is needed.
-
-Configure system [configure.sh](/genesis/config.sh). This script does not do a lot.
+The install command should only need to be once and then followed by the upgrade command later.
 
 ```sh
-$ ./gen configure
+$ make install
 ```
 
-Install APT packages - [install.sh](/genesis/install.sh)
-
 ```sh
-$ ./gen install
+$ make upgrade
 ```
 
-That install command should only need to be once and then followed by the upgrade command later.
+These are intended for a fresh install on a system, but they can both be run repeatedly if needed, such as if this scripts are changed, or something that was uninstalled manually needs to be installed again.
 
-Run the install command again if you make additions to this repo and want to get those installed on a machine.
+### Automation
 
-Note - this project will _not_ uninstall APT packages if they are removed from the install script, so you'll need to manually clean-up with `sudo apt-get remove PACKAGE` after packages are removed.
+I recommend **against** running the install or upgrade commands on a cron schedule.
 
-Install optional supporting packages - [optional.sh](/genesis/install-optional.sh)
+Linux systems usually have a package manage GUI tool which can be setup to prompt you daily to upgrade packages.
+
+Also, sometimes the APT tool's `upgrade` requires you explicitly approval upgrading and it will block the flow until you response. This approval cannot be done with a flag and must b done by hand when prompted with `y/N` prompt.
+
+
+## Clean
+
+Auto-remove unneeded packages and clear space in the APT cache and
 
 ```sh
-$ ./gen install-optional
+$ make clean
 ```
 
-These are intended for a fresh install but they can be run repeatedly if needed, such as if this scripts are updated or something that was uninstalled manually needs to be installed again.
+Uses APT commands:
 
-To upgrade To get the latest versions, run this:
+- `autoremove` - Remove automatically all unused packages.
+- `clean` - Erase downloaded archive files (i.e. delete cache).
 
-```sh
-$ ./gen upgrade
-```
-
-Or this:
+Note - this project will _not_ uninstall APT packages if they are removed from the install script, so you'll need to manually clean-up after packages are they removed.
 
 ```sh
-$ gen upgrade-full
+sudo apt-get remove PACKAGE
 ```
 
 
@@ -66,20 +54,23 @@ $ gen upgrade-full
 
 Run these at any time as they only read data.
 
+Versions of CLI tools, if they are installed.
+
 ```sh
-$ ./gen upgrade-list
+$ make audit
 ```
 
-Clear space in the APT cache and auto-remove unneeded packages.
+Installed packages.
 
 ```sh
-$ ./gen clean
+$ make list-apt
+$ make list-py
 ```
 
-Check installed versions of packages of interest.
+List upgradeable packages.
 
 ```sh
-$ ./gen audit
+$ make apt-upgrade-dry
 ```
 
 
@@ -87,27 +78,7 @@ $ ./gen audit
 
 Follow [Install VS Code](/docs/install-vs-code.md) guide to install from a Debian package.
 
-Updates to VS Code can be managed from within the application after that.
-
-
-## Schedule tasks
-> How to schedule cron jobs to run CLI commands
-
-<!-- This could be moved to a separate section even as Configure, but it must follow Usage/CLI -->
-
-Tasks to add to your to `cron.daily` directory or your `crontab` file.
-
-Either add `gen` to your bin executables directory, or use the full path to the executable.
-
-Upgrade packages.
-
-```sh
-$ gen upgrade
-```
-
-Warning - In some cases you have to accept explicitly. I've seen this before - the first time was an error and no
-prompt and on a subsequent run I got the y/N prompt. Therefore upgrade `-y` is not safe to run on a
-cron job as it might **block**.
+Updates to VS Code can be managed from within APT after that.
 
 
 ## Python
@@ -115,19 +86,19 @@ cron job as it might **block**.
 Install or upgrade global Python packages.
 
 ```sh
-$ gen py-packages
+$ make py
 ```
 
 Note that defaulting to latest version is not always appropriate because of dependencies
 between packages (e.g. pylint 2.5.3 needs older `isort`).
+
 Having a requirements doesn't seem to make these easier (maybe it does for some checks)
 Still, a .txt file is more of a known pattern than using shell commands.
 
 
+### Note on Python package locations
 
-## Note on Python package locations
-
-On Unix-based systems, these install the current PY3 version's site packages  such as here: ` /usr/local/lib/python3.9/site-packages`
+On Unix-based systems, these install the current PY3 version's site packages such as here: ` /usr/local/lib/python3.9/site-packages`
 
 To make those executable, there are short entry points stored in `/usr/local/bin`.
 

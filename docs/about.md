@@ -1,7 +1,25 @@
 # About
 
+
+
+The point of this project is to manage my own local infrastructure as code.
+
+I can list and change the packages installed on my Linux machines using commands here, including install Python and Node with APT.
+
+This means I can setup a new machine easily, I can sync multiple Linux machines and I have my history in version control.
+
+I hope others can benefit from this project by picking out pieces they need to run manually, or they can adapt the commands for their own automated scripts.
+
+
+## What about Ansible instead?
+
+Well, yes I did try Ansible to manage my infrastructure as code. It works okay for local setup or even a few laptops.
+
+But it was more hassle than it was worth and it was not transparent. Managing one or two laptops using this Genesis git repo works brilliantly for me. If you're curious, see my Ansible experiment at [github.com/MichaelCurrin/ansible-playbooks](https://github.com/MichaelCurrin/ansible-playbooks).
+
 <!-- TODO clean up as this is verbose and duplicates. -->
 
+<!--
 
 ## Intro
 
@@ -27,8 +45,7 @@ This is for my own use, but others can use this project, a fork of it or just us
 
 This is a simple project which contains Bash shell scripts to configure, install and update packages on a Linux machine. These are in version control and can be run repeatedly, managing it easy to maintain a machine or setup a new one.
 
-<!-- TODO: Convert to git URL -->
-If you're just here to see what APT packages I install using a Bash script, see [install.sh](/genesis/install.sh).
+If you're just here to see what APT packages I install using a Bash script, see [install.sh](https://github.com/MichaelCurrin/os-genesis/blob/master/genesis/apt/install.sh).
 
 This project focused on _packages_ - it does not support "dotfiles" as I have separate project for that.
 
@@ -38,6 +55,7 @@ The project specifies the state of packages to be installed and configured and r
 
 Further, this project works well with a layer of automation, as covered in a later section the [Schedule tasks](usage.md#schedule-tasks) part of the usage doc.
 
+-->
 
 ## Features
 

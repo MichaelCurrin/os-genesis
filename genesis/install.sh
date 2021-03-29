@@ -3,7 +3,8 @@
 echo 'Install packages'
 echo
 
-# For use of `command`, see https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/shell/commands/command.html
+# For use of `command`, see
+#   https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/shell/commands/command.html
 
 set -e
 

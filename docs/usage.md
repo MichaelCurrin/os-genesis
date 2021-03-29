@@ -105,11 +105,24 @@ Upgrade packages.
 $ gen upgrade
 ```
 
-Upgrade global Python packages.
+Warning - In some cases you have to accept explicitly. I've seen this before - the first time was an error and no
+prompt and on a subsequent run I got the y/N prompt. Therefore upgrade `-y` is not safe to run on a
+cron job as it might **block**.
+
+
+## Python
+
+Install or upgrade global Python packages.
 
 ```sh
 $ gen py-packages
 ```
+
+Note that defaulting to latest version is not always appropriate because of dependencies
+between packages (e.g. pylint 2.5.3 needs older `isort`).
+Having a requirements doesn't seem to make these easier (maybe it does for some checks)
+Still, a .txt file is more of a known pattern than using shell commands.
+
 
 
 ## Note on Python package locations

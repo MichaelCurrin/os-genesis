@@ -5,6 +5,7 @@ h help:
 
 
 .update-apt:
+	@echo 'Updating references to APT package repositories'
 	sudo apt update
 
 
@@ -19,7 +20,7 @@ install-apt: .update-apt
 	genesis/apt/install-optional.sh
 
 install-other:
-	@echo 'Install other packages - not managed by APT'
+	@echo 'Install packages not managed by APT'
 	genesis/other/install.sh
 
 py:
@@ -36,7 +37,7 @@ apt-upgrade: .update-apt
 	@echo 'Upgrading APT packages'
 	sudo apt upgrade -y -q
 
-apt-upgrade-dry:
+apt-upgrade-dry: .update-apt
 	@echo 'Listing upgradeable APT packages'
 	sudo apt list --upgradeable
 

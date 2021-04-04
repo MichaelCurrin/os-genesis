@@ -11,11 +11,6 @@ install() {
   echo
 }
 
-echo 'UPDATE'
-sudo apt update
-echo '---'
-echo
-
 echo '### START INSTALLS ###'
 
 echo

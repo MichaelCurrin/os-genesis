@@ -1,7 +1,7 @@
 # Install VS Code
 
 
-## Install with GUI
+## Download from website
 
 Go to the [Download](https://code.visualstudio.com/Download) page of the VS Code docs. It has resources if you need info.
 
@@ -14,12 +14,11 @@ Run with the recommended Debian package installer.
 Click _Install package_.
 
 
-## Install with command-line
+## Install as a deb package
 
 - [Linux setup](https://code.visualstudio.com/docs/setup/linux) in VS Code docs.
 
-
-Download `.deb` file
+Download the `.deb` file.
 
 ```sh
 $ cd ~/Downloads
@@ -35,16 +34,22 @@ Or this with the path to the `.deb` file.
 $ sudo apt install DEB_FILE
 ```
 
-Installing the `.deb` package will automatically install the apt repository and signing key to enable auto-updating using the system's package manager.
+Installing theat`.deb` package will automatically install the APT repository and signing key. That will enable auto-updating using the system's package manager, as covered next.
 
 
-## Update
+## Upgrade
 
-Unfortunately when VS Code prompts you go update, it will take you to the website to download and follow the steps from above. But that is not necessary.
+On Linux, you can't update in VS Code itself like you can on macOS. VS Code prompts you to update and you click the button, it will take you to the website to download and follow the steps from above. But that is not necessary. Rather use that as a sign to upgrade a package manager.
 
-Use your Package Manager GUI and find `code` installed programs and mark it as upgradeable.
+### Package Manager GUI
 
-Or use `apt`:
+Use your Package Manager tool and find `code` installed programs and mark it as upgradeable.
+
+### Command-line
+
+_Warning: Avoid running the upgrade command inside VS Code's own terminal. As that would would quit VS Code before all updates are done._
+
+Use `apt`.
 
 ```sh
 $ sudo apt upgrade code
@@ -56,10 +61,8 @@ Note whenever you do a system update like this, VS Code will also be included.
 $ sudo apt upgrade
 ```
 
-Or within this Genesis project:
+Or within this OS Genesis project:
 
 ```sh
 $ make upgrade
 ```
-
-Warning: Avoid running the upgrade command inside VS Code's own terminal. Otherwise that will quit VS Code before all updates are done.

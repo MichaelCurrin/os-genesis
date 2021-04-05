@@ -116,15 +116,14 @@ Make sure you have `vim` and `nano` installed.
 
 #### Install
 
-See [Install VS Code](install-vs-code.md) doc.
+VS Code is not available by default in APT packages.
 
-If you ran the `make install` command then you'll have VS Code setup already.
+See [Manage VS Code](manage-vs-code.md) doc for how to install and upgrade VS Code.
 
 #### Extensions
 
-Sign in.
-
-Turn on syncing of extensions and other settings.
+1. Sign in.
+2. Turn on syncing of extensions and other settings.
 
 For breakdown of extensions and what they do, see my [gist](https://gist.github.com/MichaelCurrin/e1f0b488d4ed8e6c24646e37c75fe2ea).
 
@@ -132,4 +131,4 @@ For breakdown of extensions and what they do, see my [gist](https://gist.github.
 
 #### Install
 
-[Download](https://www.jetbrains.com/pycharm/download/) page.
+Follow instructions on the [Download](https://www.jetbrains.com/pycharm/download/) page.

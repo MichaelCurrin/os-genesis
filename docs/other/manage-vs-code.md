@@ -1,4 +1,5 @@
-# Install VS Code
+# Manage VS Code
+> Install and upgrade VS Code IDE
 
 
 ## Download from website

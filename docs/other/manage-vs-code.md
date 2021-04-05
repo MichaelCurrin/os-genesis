@@ -53,16 +53,14 @@ _Warning: Avoid running the upgrade command inside VS Code's own terminal. As th
 Use `apt`.
 
 ```sh
-$ sudo apt upgrade code
+$ sudo apt install code
+...
+The following packages will be upgraded:
+  code
+...
 ```
 
-Note whenever you do a system update like this, VS Code will also be included.
-
-```sh
-$ sudo apt upgrade
-```
-
-Or within this OS Genesis project:
+Or upgrade all APT packages.
 
 ```sh
 $ make upgrade

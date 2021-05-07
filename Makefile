@@ -49,7 +49,7 @@ apt-upgrade-full: .update-apt
 
 pkg-upgrade:
 	@echo 'Upgrade language-specific global packages'
-	genesis/upgrade.sh
+	genesis/other/upgrade.sh
 
 u upgrade: apt-upgrade pkg-upgrade
 

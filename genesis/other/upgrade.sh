@@ -7,12 +7,14 @@ echo 'GEMS'
 
 # Shared gems.
 
-# Upgrade RubyGems gem.
+# Upgrade root RubyGems gem.
+#
 # This doesn't cause an error status if it fails.
 # Doesn't work with `--user-install`.
 sudo gem update --system
 
-# Update all gems including system Bundler.
+# Update all root gems (including system Bundler).
+#
 # There are others which are installed which I didn't install deliberately - these get updated.
 # e.g.
 #   Gems updated:
@@ -26,7 +28,7 @@ sudo gem update --system
 # had to install `libreadline-dev` and `libssl-dev` with APT.
 #sudo gem update
 
-# User gems.
+# Upgrade user gems.
 if command -c bundler >/dev/null 2>&1; then
   gem update bundler --user-install
 fi

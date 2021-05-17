@@ -16,7 +16,7 @@ Follow sections below to install more packages. Run `brew install PACKAGE` for a
 
 See also my [Gist Viewer](https://michaelcurrin.github.io/gist-viewer/) collection, as it covers how to install some of these on macOS and Linux.
 
-### Install packages for developing
+### Install packages for development
 
 ```
 git

@@ -5,6 +5,14 @@
 
 set -e
 
+# Fill in a missing sudo command when running in a container.
+if [ $UID -eq 0 ]; then
+  sudo() {
+    echo $@
+    command $@
+  }
+fi
+
 install() {
   sudo apt install -y -q $@
   echo '---'
@@ -39,20 +47,6 @@ install \
 
 # For Docker, rather install one of the newer versions if available. Currently not for Linux Lite.
 # https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/containers/install.html
-
-echo
-echo 'PRODUCTIVITY TOOLS'
-install \
-  dropbox \
-  redshift # Add warm screen tint.
-
-###
-
-echo
-echo 'BROWSER'
-install firefox
-# Driver for web scraping or automated testing. Currently not used by me.
-# install firefox-geckodriver
 
 ###
 
@@ -93,7 +87,7 @@ NODE_VERSION=14
 if command -v node >/dev/null 2>&1; then
   node -v
   npm -v
-  echo "Use $(make upgrade). To get newer than $NODE_VERSION, update the configured version in the script t"
+  echo "Use $(make upgrade). To get newer than $NODE_VERSION, update the configured version in the script."
 else
   echo 'Adding Node to deb sources and installing'
   # Setup Debian source for Node.js

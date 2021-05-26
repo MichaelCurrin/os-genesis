@@ -18,7 +18,7 @@ if false; then
     echo 'Deno is already installed'
     deno --version
   else
-    echo 'Installing deno'
+    echo 'Installing Deno'
     curl -fsSL https://deno.land/x/install/install.sh | sh
   fi
 

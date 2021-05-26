@@ -3,33 +3,34 @@
 echo 'Show installed package versions'
 echo
 
-bash --version
-zsh --version
-echo
+version() {
+  TOOL="$1"
+  echo "### ${TOOL} ###"
 
-git --version
-echo
+  if command -v "$TOOL" >/dev/null 2>&1; then
+    "$TOOL" --version
+  else
+    echo "Not installed"
+  fi
+  echo
 
-python3 -V
-echo
+}
 
-echo "Node - $(node -v)"
-echo "NPM - $(npm -v)"
-echo
+version bash
+version zsh
 
-echo 'RUBY'
-ruby --version
-bundler --version
-echo
+version git
 
-echo 'GO'
-go --version
-echo
+version python3
 
-echo 'RUST'
-rustc --version
-echo
+version node
+version npm
+version deno
 
-echo 'DENO'
-deno --version
-echo
+version ruby
+version bundler
+
+version rustc
+
+echo "### go ###"
+go version

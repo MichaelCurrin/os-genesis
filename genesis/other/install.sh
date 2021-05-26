@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 echo 'YARN'
 
@@ -8,19 +9,23 @@ if command -v node >/dev/null 2>&1; then
   npm install -g yarn
 fi
 
-###
-
 echo
-echo 'DENO'
 
-if command -v deno >/dev/null 2>&1; then
-  echo 'Deno is already installed'
-  deno --version
-else
-  echo 'Installing deno'
-  curl -fsSL https://deno.land/x/install/install.sh | sh
+if false; then
+  echo 'DENO'
+
+  if command -v deno >/dev/null 2>&1; then
+    echo 'Deno is already installed'
+    deno --version
+  else
+    echo 'Installing deno'
+    curl -fsSL https://deno.land/x/install/install.sh | sh
+  fi
+
+  if [[ "$PATH" != *$HOME/.deno/bin* ]]; then
+    echo 'Warning: .deno/bin is not in the PATH'
+  fi
 fi
-# NB. Make sure $HOME/.deno/bin is in PATH.
 
 ###
 
@@ -34,5 +39,7 @@ else
   curl https://sh.rustup.rs -sSf | sh
   # Alternatively, use the rust-src APT package.
 fi
-# Expect this to be in PATH:
-#   ~/.cargo/bin
+
+if [[ "$PATH" != *$HOME/.cargo/bin* ]]; then
+  echo 'Warning: .cargo/bin is not in the PATH'
+fi

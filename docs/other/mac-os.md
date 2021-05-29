@@ -130,37 +130,9 @@ openssl
 openssl@1.1
 ```
 
-### Brew packages dump
+### Packages installed with Brew
 
-Here is a dump of everything in Oct 2020 as a reference.
-
-```sh
-$ brew list
-```
-```
-autoconf                httpie                  libxmlsec1              pyenv-virtualenv
-bdw-gc                  hugo                    libyaml                 python@3.8
-coreutils               icu4c                   little-cms2             python@3.9
-cython                  ipython                 mongodb                 r
-dnsmasq                 isl                     mpfr                    readline
-dyld-headers            jasper                  mysql                   ruby
-elixir                  jpeg                    mysql-client            shfmt
-erlang                  krb5                    mysql-connector-c       snappy
-findutils               kubernetes-cli          mysql-connector-c++     sphinx-doc
-freetype                leveldb                 ncurses                 sqlite
-gcc                     libevent                nettle                  swig
-gdbm                    libffi                  node                    terraform
-gettext                 libgcrypt               openblas                tree
-git                     libgpg-error            openjdk                 unbound
-gmp                     libidn2                 openssl@1.1             webp
-gnutls                  libmpc                  p11-kit                 wget
-gotty                   libpng                  pcre                    wxmac
-gperftools              libtasn1                pcre2                   xz
-graphicsmagick          libtiff                 pkg-config              yarn
-groovy                  libtool                 postgresql              zeromq
-guile                   libunistring            protobuf
-htop                    libxml2                 pyenv
-```
+See my [gist](https://gist.github.com/MichaelCurrin/593652bece9e931b9909196031f55af0).
 
 
 ## Install manually

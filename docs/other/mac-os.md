@@ -18,6 +18,8 @@ See also my [Gist Viewer](https://michaelcurrin.github.io/gist-viewer/) collecti
 
 ### Install packages for development
 
+I might not be interested in keeping these all installed, but it is a record so I can install again if needed.
+
 ```
 git
 ```
@@ -130,7 +132,9 @@ openssl
 openssl@1.1
 ```
 
-### Packages installed with Brew
+### Brew dump
+
+Packages installed with Brew, including dependents.
 
 See my [gist](https://gist.github.com/MichaelCurrin/593652bece9e931b9909196031f55af0).
 

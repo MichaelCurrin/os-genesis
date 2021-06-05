@@ -64,6 +64,16 @@ install \
   python3-pip \
   python3-venv
 
+# The above is for Python3.8 only as the latest, even though 3.9 is out.
+# This can be used as an alternative and is supported by LinuxLite GUI.
+#install \
+#  python3.9 \
+#  python3.9-dev
+
+# Optionally also this, but it might be implied.
+#	python3.9-minimal
+# Unfortunately python3.9-full includes a bunch of stuff but not python3.9-dev.
+
 ###
 
 echo

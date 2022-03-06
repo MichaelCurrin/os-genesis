@@ -33,7 +33,7 @@ install: config install-apt install-other py
 
 # Upgrade
 
-u apt-upgrade: .update-apt
+au apt-upgrade: .update-apt
 	@echo 'Upgrading APT packages'
 	sudo apt upgrade -y -q
 

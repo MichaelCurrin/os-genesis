@@ -1,20 +1,25 @@
 # Usage
 
-Commands are defined in [Makefile](/Makefile). See that file for more detailed commands or run:
+Run commands from the repo root.
+
+Commands are defined in the [Makefile](/https://github.com/MichaelCurrin/os-genesis/blob/master/Makefile). See that file for more detailed commands, or run the help command:
 
 ```sh
 $ make help
 ```
 
+
 ## Manage packages
 
-When setting up a new system, run the install command.
+Install packages:
 
 ```sh
 $ make install
 ```
 
-Later, run the upgrade command.
+This is useful on a new system or after making changes to the shell files of what should be installed.
+
+Upgrade packages:
 
 ```sh
 $ make upgrade

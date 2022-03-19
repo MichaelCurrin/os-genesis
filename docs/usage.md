@@ -2,7 +2,12 @@
 
 Run commands from the repo root.
 
-Commands are defined in the [Makefile](/https://github.com/MichaelCurrin/os-genesis/blob/master/Makefile). See that file for more detailed commands, or run the help command:
+
+## Help
+
+Commands are defined in the [Makefile](/https://github.com/MichaelCurrin/os-genesis/blob/master/Makefile). See that file for more detailed commands.
+
+Or run the help command:
 
 ```sh
 $ make help

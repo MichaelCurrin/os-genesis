@@ -1,33 +1,34 @@
-# Setup steps
+# Set up steps
 
-Notes (mainly for myself) on reliably setting up a new laptop or fresh OS install using my preferred order of steps and software.
+Notes on reliably setting up a new laptop or fresh OS install using my preferred order of steps and software.
 
 This guide is for **Linux**. See also my [macOS Reference](mac-os.md) page.
 
 
-## 1. Basic
+## 1. Install new operating system
 
-1. Write OS to DVD-R or flash drive.
-1. Plug it in another machine or leave it in the current one.
+1. Download your ISO image for your preferred Linux distro.
+1. Write that to a DVD-R or flash drive.
+1. Insert into the machine which you want write over.
 1. Turn off the machine.
 1. Boot it up.
 1. Follow install steps. In particular:
-    1. Select to **encrypt** hard drive with a password.
-    1. Choose **US** language.
+    1. Select the option to **encrypt** your hard drive with a password. This adds security so you need to add this password when rebooting the machine.
+    1. Choose language such as **US**.
 
 
 ## 2. System config
 
 Once logged in, set these up:
 
-- Connect to WiFi.
+- Connect to your WiFi.
 - Power manager under settings.
     - Turn on _notifications_ and _tray icon_.
-- Setup network
+- Set up network
     - Edit `/etc/hosts` and setup the machines. This can happen later when I need it.
 - Optionally disable requiring password for `sudo` commands.
-    - Run `sudo visudo`.
-    - Set this.
+    1. Run `sudo visudo`.
+    1. Set this with your username.
         ```
         %michael ALL=(ALL) NOPASSWD:ALL
         ```
@@ -74,7 +75,7 @@ These are from the Software installer GUI and some are covered in the `make inst
 - Tor browser
 - Webcam Software
 
-### Setup start on boot commands
+### Set up start-on-boot commands
 
 To ensure software starts on startup (like `yakuake`), set these up under Settings.
 
@@ -93,17 +94,31 @@ You'll need some IDE to set that up. Like `nano` or `vim`.
 
 ### Shell config setup
 
-This is my **private** repo.
+Set up configs like `.bashrc`, git config, and aliases.
 
-```sh
-$ mkdir -p repos
-$ git clone git@github.com:MichaelCurrin/shell-dev-setup.git
-$ cd shell-dev-setup
-```
+#### Public repo
 
-Then follow the README.
+Go here:
 
-Put off doing commits until that it setup so that git config has email and username.
+- https://github.com/MichaelCurrin/dotfiles
+
+Set up your configs based on that.
+
+#### Private repo
+
+I have another repo which is kept more up to date and has more details. It is kept private though in case I need to have work-related variables in there like names of servers.
+
+Skip this step if you are not MichaelCurrin.
+
+1. Clone:
+    ```sh
+    $ mkdir -p repos
+    $ git clone git@github.com:MichaelCurrin/shell-dev-setup.git
+    $ cd shell-dev-setup
+    ```
+1. Follow the README.
+
+Put off doing any Git commits until that is setup first, so that git config will have email and username.
 
 
 ## 5. Install IDEs
@@ -123,7 +138,7 @@ See [Manage VS Code](manage-vs-code.md) doc for how to install and upgrade VS Co
 #### Extensions
 
 1. Sign in.
-2. Turn on syncing of extensions and other settings.
+1. Turn on syncing of extensions and other settings.
 
 For breakdown of extensions and what they do, see my [gist](https://gist.github.com/MichaelCurrin/e1f0b488d4ed8e6c24646e37c75fe2ea).
 

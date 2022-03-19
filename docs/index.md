@@ -11,9 +11,12 @@
 
 Orchestrate package management on a Linux developer's machine with this shell-based tool.
 
-It handles installing, upgrading and listing packages managed - both with and without APT. Including Dropbox, Firebox, Python, Ruby, Go, Rust, Deno and Node. If you're just here to see what APT packages I install using Bash scripts, see [install.sh](https://github.com/MichaelCurrin/os-genesis/blob/master/genesis/apt/install.sh).
 
-It uses `make` as wrapper on shell commands, making it convenient to run `apt-get` or `apt` commands without having to type or remember a lot.
+This project handles installing, upgrading and listing packages managed both with and without APT. Including Dropbox, Firebox, Python, Ruby, Go, Rust, Deno and Node. If you're just here to see what APT packages I install using the Bash scripts, see [install.sh](https://github.com/MichaelCurrin/os-genesis/blob/master/genesis/apt/install.sh).
+ 
+This project just needs `make` (built-in for Linux and macOS). That is used to execute a few shell scripts and is used as a convenient wrapper around longer `apt-get` or `apt` commands.
+
+A bit like Ansible or a Dockerfile for your host machine, but without needing Ansible or Docker installed.
 
 
 ## Intro

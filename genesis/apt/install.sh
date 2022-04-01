@@ -94,7 +94,7 @@ fi
 echo
 echo 'NODE / NPM'
 
-NODE_VERSION=14
+NODE_VERSION=16
 
 # See https://gist.github.com/MichaelCurrin/aa1fc56419a355972b96bce23f3bccba
 if command -v node >/dev/null 2>&1; then
@@ -126,7 +126,7 @@ fi
 # Requires the above to be run first, otherwise you'll end up with older 10.x
 # version. This may not be needed as it is runs an apt install of package
 # already installed. And the upgrade script uses APT to take care of upgrades
-# within 14.x
+# within 16.x
 install nodejs
 
 ###

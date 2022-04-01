@@ -7,6 +7,11 @@ set -e
 
 echo 'NODE / NPM'
 
-sudo chmod 775 /usr/local/lib/npm
+NPM_LOCAL_LIB=/usr/local/lib/npm
+
+# You can also try chown $USER.
+if [ -d "$NPM_LOCAL_LIB" ]; then
+  sudo chmod 775 "$NPM_LOCAL_LIB"
+fi
 
 echo

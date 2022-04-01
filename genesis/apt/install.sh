@@ -21,9 +21,8 @@ install() {
 
 echo '### START INSTALLS ###'
 
-echo
-echo 'STANDARD'
-# These were included on Linux Lite, but are included anyway in case they are not there future or on Ubuntu.
+# These were included on Linux Lite, but are included anyway in case they are
+# not there future or on Ubuntu.
 install \
   curl \
   ssh \
@@ -45,7 +44,8 @@ install \
   yakuake \
   docker.io
 
-# For Docker, rather install one of the newer versions if available. Currently not for Linux Lite.
+# For Docker, rather install one of the newer versions if available. Currently
+# not for Linux Lite.
 # https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/containers/install.html
 
 ###

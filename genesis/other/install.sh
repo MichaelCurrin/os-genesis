@@ -11,6 +11,8 @@ fi
 
 echo
 
+# Deno and its packages were to unstable for me even at v1, so I'm not going
+# to use it for a few years.
 if false; then
   echo 'DENO'
 

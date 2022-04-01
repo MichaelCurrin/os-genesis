@@ -32,6 +32,12 @@ $ wget 'https://go.microsoft.com/fwlink/?LinkID=760868' -O code.deb
 $ sudo apt install ./code.deb
 ```
 
+If you get a permissions issue for `_apt` user, try this then install again:
+
+```sh
+$ chmod 666 ./code.deb
+```
+
 ### GUI
 
 1. Click on this link to start the download, based on the setup page:

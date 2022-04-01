@@ -7,17 +7,16 @@ set -e
 
 echo 'NODE / NPM'
 
-# Prevent sudo needed for global NPM installs to `/usr/local/lib/npm` for NPM
-# itself or `/usr/lib/node_modules`.
-# Advice before was 'chmod 775' but I prefer to just change the owner to be me.
+# Prevent sudo needed for global installs of NPM itself and other node modulers.
+# Note that changing owner of /usr/local is bad because sudoers needs it to be
+# owned by root.
 
-LOCAL=/usr/local/
-# For node_modules.
-LIB=/usr/lib/
+NPM_LOCAL=/usr/local/lib/npm
+NODE_MODULES_LIB=/usr/lib/node_modules
 
-for DIR in "$LOCAL" "$LIB"; do
+for DIR in "$NPM_LOCAL" "$NODE_MODULES_LIB"; do
   mkdir -p "$DIR"
-  sudo chown "$USER" "$DIR" --recursive
+  sudo chmod 775 "$USER" "$DIR"
 done
 
 echo

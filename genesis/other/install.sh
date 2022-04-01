@@ -31,17 +31,19 @@ fi
 
 ###
 
-echo 'RUST'
+if false; then
+  echo 'RUST'
 
-if command -v rustc /dev/null 2>&1; then
-  echo 'Rust is already installed'
-  rustc -V
-else
-  # For macOS and Linux.
-  curl https://sh.rustup.rs -sSf | sh
-  # Alternatively, use the rust-src APT package.
-fi
+  if command -v rustc /dev/null 2>&1; then
+    echo 'Rust is already installed'
+    rustc -V
+  else
+    # For macOS and Linux.
+    curl https://sh.rustup.rs -sSf | sh
+    # Alternatively, use the rust-src APT package.
+  fi
 
-if [[ "$PATH" != *$HOME/.cargo/bin* ]]; then
-  echo 'Warning: .cargo/bin is not in the PATH'
+  if [[ "$PATH" != *$HOME/.cargo/bin* ]]; then
+    echo 'Warning: .cargo/bin is not in the PATH'
+  fi
 fi

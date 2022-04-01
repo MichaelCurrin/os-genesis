@@ -100,7 +100,7 @@ Follow my cookbook page to setup SSH on your machine from scratch and configure 
 
 - [GitHub SSH Access](https://michaelcurrin.github.io/code-cookbook/recipes/shell/ssh/github-ssh-access.html)
 
-You'll need some editor to set that up. Like `nano` or `vim`.
+You'll need some text editor to set that up. Like `nano` or `vim`.
 
 ### Shell config setup
 

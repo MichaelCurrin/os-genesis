@@ -1,4 +1,4 @@
-# Set up steps
+# Setup steps
 
 Notes on reliably setting up a new laptop or fresh OS install using my preferred order of steps and software.
 
@@ -35,10 +35,10 @@ Once logged in, set these up:
 - Set up power manager under settings.
     - Turn on _notifications_ and _tray icon_.
 - Set up network
-    - Edit `/etc/hosts` and set up my home machines. This can happen later when I need it.
+    - Edit `/etc/hosts` and set up machines on the home work. This can happen later when needed.
 - Optionally disable the need for password when running `sudo` commands.
     1. Run `sudo visudo`.
-    1. Set this with your username.
+    1. Set this with your username. e.g.
         ```
         %michael ALL=(ALL) NOPASSWD:ALL
         ```
@@ -48,19 +48,18 @@ Once logged in, set these up:
 
 ### Set up a browser
 
-1. Install Firefox if not installed already. Use `firefox` as the APT package or Brew cask.
-1. Set up Firefox settings.
-1. Install LastPass extension - [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/).
+1. Install Firefox, if not installed already. Use your system's package manager GUI or install `firefox` through APT or Brew cask.
+1. Install LastPass extension - to go [link](https://addons.mozilla.org/en-US/firefox/addon/lastpass-password-manager/).
 1. Set up Firefox sync.
-    - Login using password in LastPass.
-    - Remaining extensions will be installed using sync.
+    - Login using the password in LastPass.
+    - The settings and other extensions will be installed using sync.
 
 ### Install packages
 
 Follow instructions in this OS Genesis project to install dev packages (like Python and Ruby) and shell tools.
 
-1. Follow [install](../installation.md) page.
-1. Follow the main [usage](../usage.md) steps.
+1. Follow the [install](../installation.md) page.
+1. Install packages as per [usage](../usage.md) steps.
     ```sh
     $ make install
     ```

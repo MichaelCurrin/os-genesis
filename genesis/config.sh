@@ -17,7 +17,7 @@ LIB=/usr/lib/
 
 for DIR in "$LOCAL" "$LIB"; do
   mkdir -p "$DIR"
-  sudo chown "$USER" "$DIR"
+  sudo chown "$USER" "$DIR" --recursive
 done
 
 echo

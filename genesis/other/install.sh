@@ -6,7 +6,7 @@ echo 'YARN'
 # See also https://gist.github.com/MichaelCurrin/bdc34c554fa3023ee81449eb77375fcb
 
 if command -v node >/dev/null 2>&1; then
-  npm install -g yarn
+  sudo npm install -g yarn
 fi
 
 echo

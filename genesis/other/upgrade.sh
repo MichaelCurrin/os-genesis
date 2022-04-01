@@ -40,14 +40,14 @@ echo
 echo 'NPM'
 
 if command -v npm >/dev/null 2>&1; then
-  npm upgrade -g npm
+  sudo npm upgrade -g npm
 fi
 echo
 
 echo 'YARN'
 
 if command -v yarn >/dev/null 2>&1; then
-  npm upgrade -g yarn
+  sudo npm upgrade -g yarn
 fi
 echo
 

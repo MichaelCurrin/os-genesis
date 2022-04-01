@@ -54,10 +54,12 @@ echo
 echo 'PYTHON'
 # Notes:
 # -dev  - Includes C headers for compiling extensions - needed for lxml.
-# -pip  - This somehow got removed from my machine so I added it back. If you don't install packages globally,
-#         you actually don't need the `pip` command. You can always access it in a virtual environment.
-# -venv - Although the venv module is now standard, this AP package is needed to install `ensurepip`
-#         otherwise you get an error when running `python -m venv PATH`.
+# -pip  - This somehow got removed from my machine so I added it back. If you
+#         don't install packages globally, you actually don't need the `pip`
+#         command. You can always access it in a virtual environment.
+# -venv - Although the venv module is now standard, this AP package is needed to
+#         install `ensurepip` otherwise you get an error when running `python -m
+#         venv PATH`.
 install \
   python3 \
   python3-dev \
@@ -80,7 +82,8 @@ echo
 echo 'RUBY'
 install ruby ruby-dev
 
-# Make sure to install bundler at the user level and not using apt (as you'd be root and you won't install gems in the user level).
+# Make sure to install bundler at the user level and not using apt (as you'd be
+# root and you won't install gems in the user level).
 if ! command -v bundler /dev/null 2>&1; then
   gem install bundler --user-install
   # Expect output warning: `~/.gem/ruby/2.7.0/bin must be in PATH`.
@@ -106,7 +109,8 @@ else
   #     https://nodejs.org/en/download/package-manager/
   #     https://github.com/nodesource/distributions/blob/master/README.md
   #
-  # Note that this requires root access. Unlike if you use Brew or install NVM instead.
+  # Note that this requires root access. Unlike if you use Brew or install NVM
+  # instead.
   curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
 fi
 
@@ -119,9 +123,10 @@ fi
 #      echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 #      sudo apt-get update && sudo apt-get install yarn
 
-# Requires the above to be run first, otherwise you'll end up with older 10.x version.
-# This may not be needed as it is runs an apt install of package already installed.
-# And the upgrade script uses APT to take care of upgrades within 14.x
+# Requires the above to be run first, otherwise you'll end up with older 10.x
+# version. This may not be needed as it is runs an apt install of package
+# already installed. And the upgrade script uses APT to take care of upgrades
+# within 14.x
 install nodejs
 
 ###

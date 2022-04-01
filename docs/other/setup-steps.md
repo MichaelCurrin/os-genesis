@@ -112,7 +112,7 @@ Two options below.
 
 Go here:
 
-- https://github.com/MichaelCurrin/dotfiles
+- [github.com/MichaelCurrin/dotfiles](https://github.com/MichaelCurrin/dotfiles)
 
 Set up your configs based on that.
 

@@ -39,6 +39,7 @@ echo
 
 echo 'NPM'
 
+# Or `install npm@latest` for minor versions.
 if command -v npm >/dev/null 2>&1; then
   sudo npm upgrade -g npm
 fi

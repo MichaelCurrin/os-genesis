@@ -106,6 +106,8 @@ You'll need some editor to set that up. Like `nano` or `vim`.
 
 Set up configs like `.bashrc`, git config, and aliases.
 
+Two options below.
+
 #### Public repo
 
 Go here:
@@ -123,7 +125,7 @@ Skip this step if you are not MichaelCurrin.
 1. Clone:
     ```sh
     $ mkdir -p repos
-    $ git clone https://github.com/MichaelCurrin/shell-dev-setup.git
+    $ git clone git@github.com:MichaelCurrin/shell-dev-setup.git
     $ cd shell-dev-setup
     ```
 1. Follow the README.

@@ -15,7 +15,7 @@ NPM_LOCAL=/usr/local/lib/npm
 NODE_MODULES_LIB=/usr/lib/node_modules
 
 for DIR in "$NPM_LOCAL" "$NODE_MODULES_LIB"; do
-  mkdir -p "$DIR"
+  sudo mkdir -p "$DIR"
   sudo chmod 775 "$USER" "$DIR"
 done
 

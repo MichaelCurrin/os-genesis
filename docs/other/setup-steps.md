@@ -100,7 +100,7 @@ Follow my cookbook page to setup SSH on your machine from scratch and configure 
 
 - [GitHub SSH Access](https://github.com/MichaelCurrin/code-cookbook/blob/master/recipes/shell/ssh/github-ssh-access.md)
 
-You'll need some IDE to set that up. Like `nano` or `vim`.
+You'll need some editor to set that up. Like `nano` or `vim`.
 
 ### Shell config setup
 
@@ -123,19 +123,15 @@ Skip this step if you are not MichaelCurrin.
 1. Clone:
     ```sh
     $ mkdir -p repos
-    $ git clone git@github.com:MichaelCurrin/shell-dev-setup.git
+    $ git clone https://github.com/MichaelCurrin/shell-dev-setup.git
     $ cd shell-dev-setup
     ```
 1. Follow the README.
 
-Put off doing any Git commits until that is setup first, so that git config will have email and username.
+Put off doing any Git commits until that is setup first, so that the Git config will have email and username.
 
 
 ## 5. Install IDEs
-
-### Terminal
-
-Make sure you have `vim` and `nano` installed.
 
 ### VS Code
 

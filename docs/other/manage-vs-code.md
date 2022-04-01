@@ -17,25 +17,27 @@ Click _Install package_.
 
 ## Install as a deb package
 
-- [Linux setup](https://code.visualstudio.com/docs/setup/linux) in VS Code docs.
+Installing the VS Code Debian package will automatically install the APT repository and signing key. That will enable auto-updating using the system's package manager, as covered next.
 
-Download the `.deb` file.
+Download the `.deb` file and install it, based on [Linux setup](https://code.visualstudio.com/docs/setup/linux) in VS Code docs.
+
+### CLI
 
 ```sh
 $ cd ~/Downloads
-$ wget 'https://go.microsoft.com/fwlink/?LinkID=760868'
-$ ls
+$ wget 'https://go.microsoft.com/fwlink/?LinkID=760868' -O code.deb
 ```
-
-If you system is configured right you can double-click on the file, or choose to _Open with..._ and choose a Debian package manager.
-
-Or this with the path to the `.deb` file.
 
 ```sh
-$ sudo apt install DEB_FILE
+$ sudo apt install ./code.deb
 ```
 
-Installing theat`.deb` package will automatically install the APT repository and signing key. That will enable auto-updating using the system's package manager, as covered next.
+### GUI
+
+1. Click on this link to start the download, based on the setup page:
+    - [go.microsoft.com/fwlink/?LinkID=760868](https://go.microsoft.com/fwlink/?LinkID=760868)
+1. Install it.
+    - Double-click on the file. If not supported by default, click _Open with..._ and choose a Debian package manager.
 
 
 ## Upgrade

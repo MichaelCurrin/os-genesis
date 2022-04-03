@@ -84,6 +84,8 @@ install ruby ruby-dev
 
 # Make sure to install bundler at the user level and not using apt (as you'd be
 # root and you won't install gems in the user level).
+# The install command will also work to upgrade Bundle if you want to run it
+# alone.
 if ! command -v bundler /dev/null 2>&1; then
   gem install bundler --user-install
   # Expect output warning: `~/.gem/ruby/2.7.0/bin must be in PATH`.
@@ -100,7 +102,8 @@ NODE_VERSION=16
 if command -v node >/dev/null 2>&1; then
   node -v
   npm -v
-  echo "Use $(make upgrade). To get newer than $NODE_VERSION, update the configured version in the script."
+  echo "Use $(make upgrade). To get newer than $NODE_VERSION, update the configured version in the script below"
+  echo " You also have to remove the old path from your sources and do 'sudo apt remove nodejs' before installing."
 else
   echo 'Adding Node to deb sources and installing'
   # Setup Debian source for Node.js
@@ -122,12 +125,6 @@ fi
 #      curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 #      echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 #      sudo apt-get update && sudo apt-get install yarn
-
-# Requires the above to be run first, otherwise you'll end up with older 10.x
-# version. This may not be needed as it is runs an apt install of package
-# already installed. And the upgrade script uses APT to take care of upgrades
-# within 16.x
-install nodejs
 
 ###
 

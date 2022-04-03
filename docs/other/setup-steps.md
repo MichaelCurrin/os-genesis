@@ -54,7 +54,7 @@ Once logged in, set these up:
     - Login using the password in LastPass.
     - The settings and other extensions will be installed using sync.
 
-### Install packages
+### Install dev packages
 
 Follow instructions in this OS Genesis project to install dev packages (like Python and Ruby) and shell tools.
 
@@ -68,6 +68,8 @@ Be sure to keep that up to date as new packages are installed i.e. Run `git pull
 
 See also on _Linux Lite - Software installer_ GUI (a few packages) or package manager (many packages) or `apt`.
 
+If you need Docker, see Docker and Docker Compose install guides [here](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/containers/).
+
 ### Install additional packages
 
 These are from the Software installer GUI and some are covered in the `make install` command already.
@@ -80,7 +82,7 @@ These are from the Software installer GUI and some are covered in the `make inst
 - Music player
 - Nitroshare - transfer between files on network.
 - Password manager
-- Redshift - screen temperature. Enable _Autostart_ using the tray icon.
+- Redshift - screen temperature. Start it from the programs list then enable _Autostart_ using the tray icon.
 - Steam
 - Tor browser
 - Webcam Software

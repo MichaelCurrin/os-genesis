@@ -115,6 +115,9 @@ else
   # Note that this requires root access. Unlike if you use Brew or install NVM
   # instead.
   curl -sL "https://deb.nodesource.com/setup_${NODE_VERSION}.x" | sudo -E bash -
+
+  # This is needed.
+  sudo apt install nodejs -y
 fi
 
 # Output from above:

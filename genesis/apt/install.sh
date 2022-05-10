@@ -57,7 +57,7 @@ echo 'PYTHON'
 # -pip  - This somehow got removed from my machine so I added it back. If you
 #         don't install packages globally, you actually don't need the `pip`
 #         command. You can always access it in a virtual environment.
-# -venv - Although the venv module is now standard, this AP package is needed to
+# -venv - Although the venv module is now standard, this APT package is needed to
 #         install `ensurepip` otherwise you get an error when running `python -m
 #         venv PATH`.
 install \

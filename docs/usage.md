@@ -34,6 +34,22 @@ You can run the install command repeatedly safely, but it might keep you at the 
 
 It is useful to run the install command whenever there are changes to this repo, such as adding a new package to be installed. Or if packages were uninstalled manually or accidentally and you want to return to the state indicated by this repo.
 
+### Node.js
+
+As part of the install steps, Node will be installed using a version configured in `Makefile`.
+
+To install just Node, using the configured version, run this:
+
+```sh
+$ make replace-node
+```
+
+To uninstall Node and then install a target Node version, run this:
+
+```sh
+$ make replace-node NODE_VERSION=12
+```
+
 ### APT vs not APT
 
 Note that while Rust and Go which could be setup with APT rather than by a manual install with `curl`, I prefer the manual approach. It's more verbose initially but easy to manage later. Plus this project manages the `curl` commands so you don't have to it.
@@ -42,10 +58,9 @@ With APT, it gets confusing when you use the tool's CLI to upgrade to a newer ve
 
 I discuss this further in a [blog post here](https://michaelcurrin.github.io/coding-blog/2020/08/25/package-manager-choice.html).
 
-
 ### Automation
 
-I recommend **against** running the install or upgrade commands on a cron schedule.
+I recommend to **not** run the install or upgrade commands on a cron schedule.
 
 Linux systems usually have a package manage GUI tool which can be setup to prompt you daily to upgrade packages.
 
@@ -60,7 +75,7 @@ Auto-remove unneeded packages and clear space in the APT cache and
 $ make clean
 ```
 
-Uses APT commands:
+That uses APT commands:
 
 - `autoremove` - Remove automatically all unused packages.
 - `clean` - Erase downloaded archive files (i.e. delete cache).

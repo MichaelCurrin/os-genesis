@@ -53,28 +53,31 @@ install \
 echo
 echo 'PYTHON'
 # Notes:
-# -dev  - Includes C headers for compiling extensions - needed for lxml.
-# -pip  - This somehow got removed from my machine so I added it back. If you
-#         don't install packages globally, you actually don't need the `pip`
-#         command. You can always access it in a virtual environment.
-# -venv - Although the venv module is now standard, this APT package is needed to
-#         install `ensurepip` otherwise you get an error when running `python -m
-#         venv PATH`.
+# *-dev  - Includes C headers for compiling extensions - needed for lxml.
+# *-pip  - This somehow got removed from my machine so I added it back. If you
+#          don't install packages globally, you actually don't need the `pip`
+#          command. You can always access it in a virtual environment.
+# *-venv - Although the venv module is now standard, this APT package is needed to
+#          install `ensurepip` otherwise you get an error when running `python -m
+#          venv PATH`. Also, this installs `python3.7-distutils` which is necessary
+#          for running pip instide a virtual environment.
 install \
   python3 \
   python3-dev \
   python3-pip \
   python3-venv
 
-# The above is for Python3.8 only as the latest, even though 3.9 is out.
-# This can be used as an alternative and is supported by LinuxLite GUI.
-#install \
-#  python3.9 \
-#  python3.9-dev
+# To target a specific version, add the Debian repository:
+#   sudo add-apt-repository ppa:deadsnakes/ppa
+#
+# Then install the version e.g.
+#   install \
+#     python3.9 \
+#     python3.9-dev
 
-# Optionally also this, but it might be implied.
-#	python3.9-minimal
-# Unfortunately python3.9-full includes a bunch of stuff but not python3.9-dev.
+# You can also try these:
+#	  python3.9-minimal
+#   python3.9-full which includes a bunch of stuff (but not python3.9-dev).
 
 ###
 

@@ -1,3 +1,5 @@
+export NODE_VERSION ?= 16
+
 default: help
 
 h help:
@@ -28,6 +30,9 @@ py:
 	PIP_REQUIRE_VIRTUALENV=false \
 		python3 -m pip install --upgrade -r genesis/other/requirements-global.txt
 
+replace-node:
+	genesis/apt/replace-node.sh
+	
 install: config install-apt install-other py
 
 

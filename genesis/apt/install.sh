@@ -96,7 +96,10 @@ fi
 echo
 echo 'NODE / NPM'
 
-NODE_VERSION=16
+if [ -z "$NODE_VERSION" ]; then
+  echo 'Must set NODE_VERSION'
+  exit 1
+fi
 
 # See https://gist.github.com/MichaelCurrin/aa1fc56419a355972b96bce23f3bccba
 if command -v node >/dev/null 2>&1; then

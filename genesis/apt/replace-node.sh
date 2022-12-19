@@ -16,7 +16,10 @@ if command -v node >/dev/null 2>&1; then
 fi
 
 echo 'Installing Node'
-curl -sL "https://deb.nodesource.com/setup_$(NODE_VERSION).x" | sudo -E bash -
+
+SOURCE_URL="https://deb.nodesource.com/setup_${NODE_VERSION}.x"
+echo "Requesting: $SOURCE_URL"
+curl -sL "$SOURCE_URL" | sudo -E bash -
 sudo apt install nodejs -y 
 
 node -v

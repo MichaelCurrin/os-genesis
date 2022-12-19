@@ -1,16 +1,18 @@
 #!/bin/bash
+# Uninstall Node if installed and install a given version.
 
 set -e
 
 if [ -z "$NODE_VERSION" ]; then
-  echo 'Must set NODE_VERSION'
+  echo 'Required environment variable: NODE_VERSION'
+  echo 'e.g. 16'
   exit 1
 fi
 
 if command -v node >/dev/null 2>&1; then
-  echo 'Removing Node'
+  echo 'Found Node:'
   node -v
-  
+  echo 'Removing Node'
   sudo apt remove nodejs -y
   sudo rm nodesource.list nodesource.list.save || true
 fi

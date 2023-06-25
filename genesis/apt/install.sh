@@ -91,7 +91,7 @@ install ruby ruby-dev
 # alone.
 if ! command -v bundler /dev/null 2>&1; then
   gem install bundler --user-install
-  # Expect output warning: `~/.gem/ruby/2.7.0/bin must be in PATH`.
+  # Expect output warning that you don't have ruby bin directory in your `PATH`.
 fi
 
 ###

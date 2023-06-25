@@ -27,9 +27,13 @@ Put the folder somewhere you can run it from. e.g. `~/repos`.
 
 ### Clone
 
-Clone the repo (or your fork) with `git`.
+On a fresh install, you might need to install Git. On WSL, you don't need to install it on the host even, and VS Code can use the Git in WSL if you use the WSL extension and re-open a repo in WSL.
 
-On a fresh install, you'll need `sudo apt install -y git` first.
+```sh
+$ sudo apt install -y git
+```
+
+Clone the repo (or your fork) with `git`.
 
 ```sh
 $ git clone https://github.com/MichaelCurrin/os-genesis.git

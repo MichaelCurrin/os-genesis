@@ -1,4 +1,4 @@
-export NODE_VERSION ?= 16
+export NODE_VERSION ?= 18
 
 default: help
 
@@ -32,7 +32,7 @@ py:
 
 replace-node:
 	genesis/apt/replace-node.sh
-	
+
 install: config install-apt install-other py
 
 

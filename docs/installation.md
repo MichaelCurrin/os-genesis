@@ -21,7 +21,7 @@ Download an archive of latest master (not necessarily latest tag):
 
 [![Download zip](https://img.shields.io/badge/📦_Download-master.zip-blue?style=for-the-badge)](https://github.com/MichaelCurrin/os-genesis/archive/master.zip) [![Download tarball](https://img.shields.io/badge/📦_Download-master.tar.gz-blue?style=for-the-badge)](https://github.com/MichaelCurrin/os-genesis/archive/master.tar.gz)
 
-Open the archive to unzip it with a program (Linux and macOS usually come with a tool installed so you right-click or double-click an archive to extract it).).
+Open the archive to unzip it with a program (Linux and macOS usually come with a tool installed so you right-click or double-click an archive to extract it).
 
 Put the folder somewhere you can run it from. e.g. `~/repos`.
 
@@ -40,3 +40,5 @@ Or if you setup [SSH key access](https://github.com/MichaelCurrin/code-cookbook/
 ```sh
 $ git clone git@github.com:MichaelCurrin/os-genesis.git
 ```
+
+Next, go to the [Usage](usage.md) page for running commands in the repo.

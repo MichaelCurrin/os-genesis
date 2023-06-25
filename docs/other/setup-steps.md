@@ -127,6 +127,7 @@ Skip this step if you are not MichaelCurrin.
 1. Clone:
     ```sh
     $ mkdir -p repos
+    $ cd repos
     $ git clone git@github.com:MichaelCurrin/shell-dev-setup.git
     $ cd shell-dev-setup
     ```

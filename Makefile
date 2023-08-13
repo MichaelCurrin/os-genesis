@@ -1,4 +1,4 @@
-export NODE_VERSION ?= 18
+export NODE_VERSION ?= 20
 
 default: help
 
